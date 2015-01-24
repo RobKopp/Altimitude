@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AlimitudeCreateWarningViewController saveButtonPressed:]:AlimitudeCreateWarningViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AlimitudeSharedAppState sharedInstance].warnings">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AlimitudeSettingsViewController viewWillAppear:]:AlimitudeSettingsViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AlimitudeSettingsViewController altitudeUnitsClicked:]:AlimitudeSettingsViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AlimitudeSharedAppState sharedInstance].altitudeUnits">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AlimitudeWarningTableViewController viewDidLoad]:AlimitudeWarningTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationItem.rightBarButtonItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AlimitudeWarningTableViewController tableView:numberOfRowsInSection:]:AlimitudeWarningTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[AlimitudeSharedAppState sharedInstance].warnings count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D415CE3C1A2A5360002A51C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3B1A2A5360002A51C4 /* Foundation.framework */; };
+		D415CE3E1A2A5360002A51C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */; };
+		D415CE401A2A5360002A51C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3F1A2A5360002A51C4 /* UIKit.framework */; };
+		D415CE461A2A5360002A51C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D415CE441A2A5360002A51C4 /* InfoPlist.strings */; };
+		D415CE481A2A5360002A51C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE471A2A5360002A51C4 /* main.m */; };
+		D415CE4C1A2A5360002A51C4 /* AlimitudeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE4B1A2A5360002A51C4 /* AlimitudeAppDelegate.m */; };
+		D415CE4E1A2A5360002A51C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D415CE4D1A2A5360002A51C4 /* Images.xcassets */; };
+		D415CE551A2A5360002A51C4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE541A2A5360002A51C4 /* XCTest.framework */; };
+		D415CE561A2A5360002A51C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3B1A2A5360002A51C4 /* Foundation.framework */; };
+		D415CE571A2A5360002A51C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3F1A2A5360002A51C4 /* UIKit.framework */; };
+		D415CE5F1A2A5360002A51C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D415CE5D1A2A5360002A51C4 /* InfoPlist.strings */; };
+		D415CE611A2A5360002A51C4 /* AltimitudeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE601A2A5360002A51C4 /* AltimitudeTests.m */; };
+		D415CE6B1A2A5376002A51C4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D415CE6A1A2A5376002A51C4 /* MainFlow.storyboard */; };
+		D415CE6E1A2A575B002A51C4 /* AltimeterImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D415CE6C1A2A575B002A51C4 /* AltimeterImage.png */; };
+		D415CE6F1A2A575B002A51C4 /* VerticalSpeedImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D415CE6D1A2A575B002A51C4 /* VerticalSpeedImage.jpg */; };
+		D415CE721A2A611D002A51C4 /* AlimitudeWarningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE711A2A611D002A51C4 /* AlimitudeWarningsViewController.m */; };
+		D415CE751A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */; };
+		D415CE781A2A659B002A51C4 /* AlimitudeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE771A2A659B002A51C4 /* AlimitudeSettingsViewController.m */; };
+		D415CE7B1A2A66C7002A51C4 /* AlimitudeSharedAppState.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE7A1A2A66C7002A51C4 /* AlimitudeSharedAppState.m */; };
+		D46BC33D1A4F326E00AB68EB /* Okoppiaviation.png in Resources */ = {isa = PBXBuildFile; fileRef = D46BC33B1A4F326E00AB68EB /* Okoppiaviation.png */; };
+		D46BC33F1A4F32DE00AB68EB /* App_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D46BC33E1A4F32DE00AB68EB /* App_Icon.png */; };
+		D46BD6F51A4B99CE003FD15A /* AlimitudeAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46BD6F31A4B99CE003FD15A /* AlimitudeAlarmViewController.m */; };
+		D46BD6F61A4B99CE003FD15A /* AlimitudeAlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46BD6F41A4B99CE003FD15A /* AlimitudeAlarmViewController.xib */; };
+		D4A24A5C1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A24A5B1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.m */; };
+		D4A24A621A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A24A611A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.m */; };
+		D4A24A671A2BF33500BC4EB3 /* AlimitudeWarningCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A24A661A2BF33500BC4EB3 /* AlimitudeWarningCellViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D415CE581A2A5360002A51C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D415CE301A2A5360002A51C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D415CE371A2A5360002A51C4;
+			remoteInfo = Altimitude;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D415CE381A2A5360002A51C4 /* Altimitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Altimitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D415CE3B1A2A5360002A51C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D415CE3F1A2A5360002A51C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D415CE431A2A5360002A51C4 /* Altimitude-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Altimitude-Info.plist"; sourceTree = "<group>"; };
+		D415CE451A2A5360002A51C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D415CE471A2A5360002A51C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D415CE491A2A5360002A51C4 /* Altimitude-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Altimitude-Prefix.pch"; sourceTree = "<group>"; };
+		D415CE4A1A2A5360002A51C4 /* AlimitudeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlimitudeAppDelegate.h; sourceTree = "<group>"; };
+		D415CE4B1A2A5360002A51C4 /* AlimitudeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlimitudeAppDelegate.m; sourceTree = "<group>"; };
+		D415CE4D1A2A5360002A51C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D415CE531A2A5360002A51C4 /* AltimitudeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AltimitudeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D415CE541A2A5360002A51C4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D415CE5C1A2A5360002A51C4 /* AltimitudeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AltimitudeTests-Info.plist"; sourceTree = "<group>"; };
+		D415CE5E1A2A5360002A51C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D415CE601A2A5360002A51C4 /* AltimitudeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AltimitudeTests.m; sourceTree = "<group>"; };
+		D415CE6A1A2A5376002A51C4 /* MainFlow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainFlow.storyboard; sourceTree = "<group>"; };
+		D415CE6C1A2A575B002A51C4 /* AltimeterImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AltimeterImage.png; sourceTree = "<group>"; };
+		D415CE6D1A2A575B002A51C4 /* VerticalSpeedImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VerticalSpeedImage.jpg; sourceTree = "<group>"; };
+		D415CE701A2A611D002A51C4 /* AlimitudeWarningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeWarningsViewController.h; sourceTree = "<group>"; };
+		D415CE711A2A611D002A51C4 /* AlimitudeWarningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeWarningsViewController.m; sourceTree = "<group>"; };
+		D415CE731A2A64A4002A51C4 /* AlimitudeInstrumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeInstrumentViewController.h; sourceTree = "<group>"; };
+		D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeInstrumentViewController.m; sourceTree = "<group>"; };
+		D415CE761A2A659B002A51C4 /* AlimitudeSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeSettingsViewController.h; sourceTree = "<group>"; };
+		D415CE771A2A659B002A51C4 /* AlimitudeSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeSettingsViewController.m; sourceTree = "<group>"; };
+		D415CE791A2A66C7002A51C4 /* AlimitudeSharedAppState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeSharedAppState.h; sourceTree = "<group>"; };
+		D415CE7A1A2A66C7002A51C4 /* AlimitudeSharedAppState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeSharedAppState.m; sourceTree = "<group>"; };
+		D46BC33B1A4F326E00AB68EB /* Okoppiaviation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Okoppiaviation.png; sourceTree = "<group>"; };
+		D46BC33E1A4F32DE00AB68EB /* App_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Icon.png; sourceTree = "<group>"; };
+		D46BD6F21A4B99CE003FD15A /* AlimitudeAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeAlarmViewController.h; sourceTree = "<group>"; };
+		D46BD6F31A4B99CE003FD15A /* AlimitudeAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeAlarmViewController.m; sourceTree = "<group>"; };
+		D46BD6F41A4B99CE003FD15A /* AlimitudeAlarmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlimitudeAlarmViewController.xib; sourceTree = "<group>"; };
+		D4A24A5A1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeWarningTableViewController.h; sourceTree = "<group>"; };
+		D4A24A5B1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeWarningTableViewController.m; sourceTree = "<group>"; };
+		D4A24A601A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeCreateWarningViewController.h; sourceTree = "<group>"; };
+		D4A24A611A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeCreateWarningViewController.m; sourceTree = "<group>"; };
+		D4A24A631A2BF11600BC4EB3 /* AlimitudeWarningCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeWarningCellViewController.h; sourceTree = "<group>"; };
+		D4A24A661A2BF33500BC4EB3 /* AlimitudeWarningCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeWarningCellViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D415CE351A2A5360002A51C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D415CE3E1A2A5360002A51C4 /* CoreGraphics.framework in Frameworks */,
+				D415CE401A2A5360002A51C4 /* UIKit.framework in Frameworks */,
+				D415CE3C1A2A5360002A51C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D415CE501A2A5360002A51C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D415CE551A2A5360002A51C4 /* XCTest.framework in Frameworks */,
+				D415CE571A2A5360002A51C4 /* UIKit.framework in Frameworks */,
+				D415CE561A2A5360002A51C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D415CE2F1A2A5360002A51C4 = {
+			isa = PBXGroup;
+			children = (
+				D415CE6A1A2A5376002A51C4 /* MainFlow.storyboard */,
+				D415CE411A2A5360002A51C4 /* Altimitude */,
+				D415CE5A1A2A5360002A51C4 /* AltimitudeTests */,
+				D415CE3A1A2A5360002A51C4 /* Frameworks */,
+				D415CE391A2A5360002A51C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D415CE391A2A5360002A51C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D415CE381A2A5360002A51C4 /* Altimitude.app */,
+				D415CE531A2A5360002A51C4 /* AltimitudeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D415CE3A1A2A5360002A51C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D415CE3B1A2A5360002A51C4 /* Foundation.framework */,
+				D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */,
+				D415CE3F1A2A5360002A51C4 /* UIKit.framework */,
+				D415CE541A2A5360002A51C4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D415CE411A2A5360002A51C4 /* Altimitude */ = {
+			isa = PBXGroup;
+			children = (
+				D46BC3391A4F324100AB68EB /* Images */,
+				D415CE6C1A2A575B002A51C4 /* AltimeterImage.png */,
+				D415CE6D1A2A575B002A51C4 /* VerticalSpeedImage.jpg */,
+				D415CE4A1A2A5360002A51C4 /* AlimitudeAppDelegate.h */,
+				D415CE4B1A2A5360002A51C4 /* AlimitudeAppDelegate.m */,
+				D415CE4D1A2A5360002A51C4 /* Images.xcassets */,
+				D415CE421A2A5360002A51C4 /* Supporting Files */,
+				D415CE701A2A611D002A51C4 /* AlimitudeWarningsViewController.h */,
+				D415CE711A2A611D002A51C4 /* AlimitudeWarningsViewController.m */,
+				D415CE731A2A64A4002A51C4 /* AlimitudeInstrumentViewController.h */,
+				D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */,
+				D46BD6F21A4B99CE003FD15A /* AlimitudeAlarmViewController.h */,
+				D46BD6F31A4B99CE003FD15A /* AlimitudeAlarmViewController.m */,
+				D46BD6F41A4B99CE003FD15A /* AlimitudeAlarmViewController.xib */,
+				D415CE761A2A659B002A51C4 /* AlimitudeSettingsViewController.h */,
+				D415CE771A2A659B002A51C4 /* AlimitudeSettingsViewController.m */,
+				D415CE791A2A66C7002A51C4 /* AlimitudeSharedAppState.h */,
+				D415CE7A1A2A66C7002A51C4 /* AlimitudeSharedAppState.m */,
+				D4A24A5A1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.h */,
+				D4A24A5B1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.m */,
+				D4A24A601A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.h */,
+				D4A24A611A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.m */,
+				D4A24A631A2BF11600BC4EB3 /* AlimitudeWarningCellViewController.h */,
+				D4A24A661A2BF33500BC4EB3 /* AlimitudeWarningCellViewController.m */,
+			);
+			path = Altimitude;
+			sourceTree = "<group>";
+		};
+		D415CE421A2A5360002A51C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D415CE431A2A5360002A51C4 /* Altimitude-Info.plist */,
+				D415CE441A2A5360002A51C4 /* InfoPlist.strings */,
+				D415CE471A2A5360002A51C4 /* main.m */,
+				D415CE491A2A5360002A51C4 /* Altimitude-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D415CE5A1A2A5360002A51C4 /* AltimitudeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D415CE601A2A5360002A51C4 /* AltimitudeTests.m */,
+				D415CE5B1A2A5360002A51C4 /* Supporting Files */,
+			);
+			path = AltimitudeTests;
+			sourceTree = "<group>";
+		};
+		D415CE5B1A2A5360002A51C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D415CE5C1A2A5360002A51C4 /* AltimitudeTests-Info.plist */,
+				D415CE5D1A2A5360002A51C4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D46BC3391A4F324100AB68EB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D46BC33E1A4F32DE00AB68EB /* App_Icon.png */,
+				D46BC33B1A4F326E00AB68EB /* Okoppiaviation.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D415CE371A2A5360002A51C4 /* Altimitude */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D415CE641A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "Altimitude" */;
+			buildPhases = (
+				D415CE341A2A5360002A51C4 /* Sources */,
+				D415CE351A2A5360002A51C4 /* Frameworks */,
+				D415CE361A2A5360002A51C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Altimitude;
+			productName = Altimitude;
+			productReference = D415CE381A2A5360002A51C4 /* Altimitude.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D415CE521A2A5360002A51C4 /* AltimitudeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D415CE671A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "AltimitudeTests" */;
+			buildPhases = (
+				D415CE4F1A2A5360002A51C4 /* Sources */,
+				D415CE501A2A5360002A51C4 /* Frameworks */,
+				D415CE511A2A5360002A51C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D415CE591A2A5360002A51C4 /* PBXTargetDependency */,
+			);
+			name = AltimitudeTests;
+			productName = AltimitudeTests;
+			productReference = D415CE531A2A5360002A51C4 /* AltimitudeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D415CE301A2A5360002A51C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Alimitude;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Okoppi;
+				TargetAttributes = {
+					D415CE371A2A5360002A51C4 = {
+						DevelopmentTeam = 659B5T8CAM;
+					};
+					D415CE521A2A5360002A51C4 = {
+						TestTargetID = D415CE371A2A5360002A51C4;
+					};
+				};
+			};
+			buildConfigurationList = D415CE331A2A5360002A51C4 /* Build configuration list for PBXProject "Altimitude" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D415CE2F1A2A5360002A51C4;
+			productRefGroup = D415CE391A2A5360002A51C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D415CE371A2A5360002A51C4 /* Altimitude */,
+				D415CE521A2A5360002A51C4 /* AltimitudeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D415CE361A2A5360002A51C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D415CE461A2A5360002A51C4 /* InfoPlist.strings in Resources */,
+				D46BC33D1A4F326E00AB68EB /* Okoppiaviation.png in Resources */,
+				D415CE6B1A2A5376002A51C4 /* MainFlow.storyboard in Resources */,
+				D46BC33F1A4F32DE00AB68EB /* App_Icon.png in Resources */,
+				D415CE4E1A2A5360002A51C4 /* Images.xcassets in Resources */,
+				D415CE6F1A2A575B002A51C4 /* VerticalSpeedImage.jpg in Resources */,
+				D46BD6F61A4B99CE003FD15A /* AlimitudeAlarmViewController.xib in Resources */,
+				D415CE6E1A2A575B002A51C4 /* AltimeterImage.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D415CE511A2A5360002A51C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D415CE5F1A2A5360002A51C4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D415CE341A2A5360002A51C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A24A621A2BDF3100BC4EB3 /* AlimitudeCreateWarningViewController.m in Sources */,
+				D4A24A5C1A2BD4CC00BC4EB3 /* AlimitudeWarningTableViewController.m in Sources */,
+				D415CE751A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m in Sources */,
+				D46BD6F51A4B99CE003FD15A /* AlimitudeAlarmViewController.m in Sources */,
+				D415CE7B1A2A66C7002A51C4 /* AlimitudeSharedAppState.m in Sources */,
+				D4A24A671A2BF33500BC4EB3 /* AlimitudeWarningCellViewController.m in Sources */,
+				D415CE721A2A611D002A51C4 /* AlimitudeWarningsViewController.m in Sources */,
+				D415CE481A2A5360002A51C4 /* main.m in Sources */,
+				D415CE4C1A2A5360002A51C4 /* AlimitudeAppDelegate.m in Sources */,
+				D415CE781A2A659B002A51C4 /* AlimitudeSettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D415CE4F1A2A5360002A51C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D415CE611A2A5360002A51C4 /* AltimitudeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D415CE591A2A5360002A51C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D415CE371A2A5360002A51C4 /* Altimitude */;
+			targetProxy = D415CE581A2A5360002A51C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D415CE441A2A5360002A51C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D415CE451A2A5360002A51C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D415CE5D1A2A5360002A51C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D415CE5E1A2A5360002A51C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D415CE621A2A5360002A51C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D415CE631A2A5360002A51C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D415CE651A2A5360002A51C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
+				INFOPLIST_FILE = "Altimitude/Altimitude-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D415CE661A2A5360002A51C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
+				INFOPLIST_FILE = "Altimitude/Altimitude-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ffb807df-dab8-4571-8fa4-62d46ee9c71b";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D415CE681A2A5360002A51C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Altimitude.app/Altimitude";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AltimitudeTests/AltimitudeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D415CE691A2A5360002A51C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Altimitude.app/Altimitude";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
+				INFOPLIST_FILE = "AltimitudeTests/AltimitudeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D415CE331A2A5360002A51C4 /* Build configuration list for PBXProject "Altimitude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D415CE621A2A5360002A51C4 /* Debug */,
+				D415CE631A2A5360002A51C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D415CE641A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "Altimitude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D415CE651A2A5360002A51C4 /* Debug */,
+				D415CE661A2A5360002A51C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D415CE671A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "AltimitudeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D415CE681A2A5360002A51C4 /* Debug */,
+				D415CE691A2A5360002A51C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D415CE301A2A5360002A51C4 /* Project object */;
+}
