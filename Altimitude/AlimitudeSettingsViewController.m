@@ -8,6 +8,7 @@
 
 #import "AlimitudeSettingsViewController.h"
 #import "AlimitudeSharedAppState.h"
+#import "AlimitudeInstrumentViewController.h"
 
 
 
@@ -30,6 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+   // self.pressuredatalabel.text = [NSString stringWithFormat:@"%g",[CMAltitudeData.pressure  doubleValue]
     
 }
 

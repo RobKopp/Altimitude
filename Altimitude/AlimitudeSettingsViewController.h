@@ -15,6 +15,8 @@
 @property(weak,nonatomic)IBOutlet UISwitch *flashLightsSwitch;
 @property(weak,nonatomic)IBOutlet UISwitch *vibrateSwitch;
 @property(weak,nonatomic)IBOutlet UISwitch *playSoundSwitch;
+@property(weak,nonatomic)IBOutlet UILabel *pressuredatalabel;
+
 
 
 

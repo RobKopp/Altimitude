@@ -19,9 +19,13 @@
         NSArray *startingValues = @[[NSNumber numberWithInteger:10000],[NSNumber numberWithInteger:12500],[NSNumber numberWithInteger:14000]];
         warnings = [NSMutableArray array];
         for(int i=0;i<[startingValues count]; ++i) {
-            NSNumber* value = (NSNumber*)[startingValues objectAtIndex:i];
-            [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:value,@"Altitude",@"YES",@"Enabled", @"Altitude Too High, Descend Immediately", @"Message", nil]];
-        }
+            NSNumber* value = (NSNumber*)[startingValues objectAtIndex:0];
+        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:value,@"Altitude",@"YES",@"Enabled", @"Warning: You have reached 10,000 ft pressure Altitude. The FAA recommends using supplemental oxygen for any time spend above 10,000 ft.", @"Message", nil]];
+     // NSNumber* value = (NSNumber*)[startingValues objectAtIndex:1];
+      //  [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:value,@"Altitude",@"YES",@"Enabled", @"Warning: You have reached 12,500 ft pressure Altitude. The FAA requires pilots using supplemental oxygen for any time more than 30 minutes spent above 10,000 ft.", @"Message", nil]];
+     // NSNumber* value = (NSNumber*)[startingValues objectAtIndex:2];
+     //   [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:value,@"Altitude",@"YES",@"Enabled", @"Warning: Descend Immediately! You have reached 14,000 ft pressure Altitude. The FAA REQUIRES pilots use supplemental oxygen for any time above 14,000 ft.", @"Message", nil]];
+       }
         self.warnings = warnings;
         
     }
