@@ -9,36 +9,31 @@
             <objects>
                 <viewController title="MeterScreen" id="UGQ-uw-ype" customClass="AlimitudeInstrumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DLm-ZL-laE"/>
-                        <viewControllerLayoutGuide type="bottom" id="yzr-Hm-M4J"/>
+                        <viewControllerLayoutGuide type="top" id="lbU-Cf-KXl"/>
+                        <viewControllerLayoutGuide type="bottom" id="yRd-rb-lNj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4eJ-tu-TB2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressure Altitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dD-wx-HHS">
-                                <rect key="frame" x="16" y="107" width="375" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressure Altitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5dD-wx-HHS">
+                                <rect key="frame" x="16" y="107" width="375" height="76"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-Cy-KU5">
-                                <rect key="frame" x="98" y="429" width="210" height="59"/>
+                                <rect key="frame" x="16" y="370" width="210" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vertical Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzQ-OC-55q">
-                                <rect key="frame" x="104" y="381" width="207" height="40"/>
+                                <rect key="frame" x="104" y="313" width="207" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ft/m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NL0-9y-mlo">
-                                <rect key="frame" x="322" y="438" width="74" height="41"/>
+                                <rect key="frame" x="234" y="382" width="74" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-R3-HRj">
-                                <rect key="frame" x="322" y="197" width="92" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="G12-ix-SyO">
@@ -51,8 +46,13 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otm-YD-yAy">
-                                <rect key="frame" x="49" y="166" width="265" height="101"/>
+                                <rect key="frame" x="-11" y="168" width="265" height="101"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-R3-HRj">
+                                <rect key="frame" x="262" y="194" width="92" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -76,21 +76,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh8-N8-glr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="48"/>
+            <point key="canvasLocation" x="2138" y="-384"/>
         </scene>
         <!--MainMenuScreen-->
         <scene sceneID="ojc-o6-r6U">
             <objects>
                 <viewController title="MainMenuScreen" id="Hwb-gx-xRi" customClass="AlimitudeSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dHG-Ej-DkY"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Ne-at-XSk"/>
+                        <viewControllerLayoutGuide type="top" id="4gg-bf-Jm8"/>
+                        <viewControllerLayoutGuide type="bottom" id="DMY-3l-xqN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jnP-6H-PJ2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7k-Az-PU5">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7k-Az-PU5">
                                 <rect key="frame" x="72" y="122" width="374" height="33"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKh-hL-1c9">
@@ -111,7 +111,7 @@
                                     </switch>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-qD-Asn">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-qD-Asn">
                                 <rect key="frame" x="72" y="177" width="374" height="33"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="inHg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3w-00-aEo">
@@ -132,16 +132,7 @@
                                     </switch>
                                 </subviews>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-7r-5TN">
-                                <rect key="frame" x="162" y="610" width="92" height="30"/>
-                                <state key="normal" title="Set Warnings">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Aq3-da-6SH" kind="modal" id="Ans-tD-C0D"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6g-vZ-rXV">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6g-vZ-rXV">
                                 <rect key="frame" x="72" y="251" width="374" height="37"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flash Light on Warning" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIY-3L-9SL">
@@ -157,7 +148,7 @@
                                     </switch>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLG-9S-ypA">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLG-9S-ypA">
                                 <rect key="frame" x="72" y="296" width="374" height="74"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vibrate on Warning" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soe-on-Xgo">
@@ -173,7 +164,7 @@
                                     </switch>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur4-rh-mpl">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur4-rh-mpl">
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound on Warning" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hii-L5-JuQ">
                                         <rect key="frame" x="20" y="8" width="182" height="21"/>
@@ -188,32 +179,36 @@
                                     </switch>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-7r-5TN">
+                                <rect key="frame" x="53" y="373" width="322" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Set Pressure Warnings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Aq3-da-6SH" kind="modal" id="Ans-tD-C0D"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Ez-hW-PCG">
+                                <rect key="frame" x="0.0" y="624" width="414" height="104"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jym-4A-6dH">
+                                <rect key="frame" x="62" y="508" width="210" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe8-C0-2zS">
+                                <rect key="frame" x="97" y="474" width="220" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hPa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-Aa-4c4">
+                                <rect key="frame" x="280" y="517" width="74" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6Ne-at-XSk" firstAttribute="top" secondItem="Eci-7r-5TN" secondAttribute="bottom" constant="96" id="2Qd-Qu-gOS"/>
-                            <constraint firstItem="oUY-qD-Asn" firstAttribute="top" secondItem="G7k-Az-PU5" secondAttribute="bottom" constant="22" id="6Ql-KG-Jvr"/>
-                            <constraint firstItem="dLG-9S-ypA" firstAttribute="top" secondItem="H6g-vZ-rXV" secondAttribute="bottom" constant="8" symbolic="YES" id="8xx-az-rYl"/>
-                            <constraint firstItem="H6g-vZ-rXV" firstAttribute="trailing" secondItem="oUY-qD-Asn" secondAttribute="trailing" id="C4f-F3-Mjn"/>
-                            <constraint firstItem="oUY-qD-Asn" firstAttribute="top" secondItem="jnP-6H-PJ2" secondAttribute="top" constant="180" id="EXv-IL-oXf"/>
-                            <constraint firstItem="oUY-qD-Asn" firstAttribute="leading" secondItem="H6g-vZ-rXV" secondAttribute="leading" id="F0L-lc-Ifl"/>
-                            <constraint firstItem="H6g-vZ-rXV" firstAttribute="leading" secondItem="dLG-9S-ypA" secondAttribute="leading" id="GHT-aQ-eN4"/>
-                            <constraint firstItem="dLG-9S-ypA" firstAttribute="trailing" secondItem="Ur4-rh-mpl" secondAttribute="trailing" id="GZy-ze-hgC"/>
-                            <constraint firstItem="oUY-qD-Asn" firstAttribute="leading" secondItem="G7k-Az-PU5" secondAttribute="leading" id="Wcu-6h-0Ne"/>
-                            <constraint firstItem="H6g-vZ-rXV" firstAttribute="top" secondItem="oUY-qD-Asn" secondAttribute="bottom" constant="75" id="YEb-di-lVA"/>
-                            <constraint firstAttribute="trailing" secondItem="G7k-Az-PU5" secondAttribute="trailing" constant="20" symbolic="YES" id="ZUT-KX-jhN"/>
-                            <constraint firstItem="dLG-9S-ypA" firstAttribute="leading" secondItem="Ur4-rh-mpl" secondAttribute="leading" id="dbr-FH-ghO"/>
-                            <constraint firstItem="Ur4-rh-mpl" firstAttribute="centerX" secondItem="Eci-7r-5TN" secondAttribute="centerX" id="eVU-4V-f1r"/>
-                            <constraint firstItem="Ur4-rh-mpl" firstAttribute="top" secondItem="jnP-6H-PJ2" secondAttribute="top" constant="378" id="eyr-dt-Iv6"/>
-                            <constraint firstItem="H6g-vZ-rXV" firstAttribute="top" secondItem="jnP-6H-PJ2" secondAttribute="top" constant="288" id="g1I-co-rji"/>
-                            <constraint firstItem="G7k-Az-PU5" firstAttribute="leading" secondItem="jnP-6H-PJ2" secondAttribute="leading" constant="20" symbolic="YES" id="iBE-bM-USM"/>
-                            <constraint firstItem="dLG-9S-ypA" firstAttribute="top" secondItem="jnP-6H-PJ2" secondAttribute="top" constant="333" id="iMu-X1-jdM"/>
-                            <constraint firstItem="G7k-Az-PU5" firstAttribute="trailing" secondItem="oUY-qD-Asn" secondAttribute="trailing" id="igG-Ft-chZ"/>
-                            <constraint firstItem="Ur4-rh-mpl" firstAttribute="top" secondItem="dLG-9S-ypA" secondAttribute="bottom" constant="8" symbolic="YES" id="mhA-s9-7KA"/>
-                            <constraint firstItem="H6g-vZ-rXV" firstAttribute="trailing" secondItem="dLG-9S-ypA" secondAttribute="trailing" id="uVT-xI-boS"/>
-                            <constraint firstItem="Eci-7r-5TN" firstAttribute="top" secondItem="Ur4-rh-mpl" secondAttribute="bottom" constant="27" id="vmF-gI-bPu"/>
-                            <constraint firstItem="G7k-Az-PU5" firstAttribute="top" secondItem="dHG-Ej-DkY" secondAttribute="bottom" constant="61" id="xCJ-xc-WX7"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="5SG-5y-VfO">
                         <barButtonItem key="backBarButtonItem" title="Meter" id="yCA-ex-EBe"/>
@@ -228,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rn8-En-q99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392" y="48"/>
+            <point key="canvasLocation" x="2712" y="-384"/>
         </scene>
         <!--Set Warnings-->
         <scene sceneID="59h-8r-Vm8">
@@ -289,15 +284,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEL-e6-UV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3336" y="55"/>
+            <point key="canvasLocation" x="3296" y="-885"/>
         </scene>
         <!--Set Warning Altitude-->
         <scene sceneID="UVU-tc-2SQ">
             <objects>
                 <viewController id="grl-m3-W6q" customClass="AlimitudeCreateWarningViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YCU-bM-XNJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="KP9-ON-7PZ"/>
+                        <viewControllerLayoutGuide type="top" id="hvB-Lf-UfH"/>
+                        <viewControllerLayoutGuide type="bottom" id="CZf-SO-uim"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M3j-xZ-lHz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -312,7 +307,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ID0-Ja-jDQ">
                                 <rect key="frame" x="67" y="172" width="280" height="236"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" keyboardDismissMode="interactive" text="Altitude Warning, Please Descend" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-TM-d3L">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" keyboardDismissMode="interactive" text="Place Your Warning Text Here!" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-TM-d3L">
                                         <rect key="frame" x="20" y="88" width="240" height="128"/>
                                         <color key="backgroundColor" red="0.75116762907608692" green="0.75116762907608692" blue="0.75116762907608692" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -332,6 +327,9 @@
                                     </label>
                                 </subviews>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="3oS-2I-1zw">
+                                <rect key="frame" x="0.0" y="624" width="414" height="104"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -353,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSd-EV-YjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3737" y="58"/>
+            <point key="canvasLocation" x="3317" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ckl-ks-jcB">
@@ -371,7 +369,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zg-LF-vPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1362" y="48"/>
+            <point key="canvasLocation" x="1582" y="-296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N09-KU-ngF">
@@ -389,11 +387,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tok-wC-QEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2804" y="55"/>
+            <point key="canvasLocation" x="2712" y="559"/>
         </scene>
     </scenes>
     <resources>
-        <image name="OkoppiBar.png" width="414" height="104"/>
+        <image name="OkoppiBar.png" width="416" height="105"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
