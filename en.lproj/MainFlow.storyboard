@@ -192,19 +192,19 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Ez-hW-PCG">
                                 <rect key="frame" x="0.0" y="624" width="414" height="104"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jym-4A-6dH">
-                                <rect key="frame" x="62" y="508" width="210" height="59"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Pressure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pe8-C0-2zS">
                                 <rect key="frame" x="97" y="474" width="220" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hPa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-Aa-4c4">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="inHg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2g-Aa-4c4">
                                 <rect key="frame" x="280" y="517" width="74" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jym-4A-6dH">
+                                <rect key="frame" x="53" y="508" width="210" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -217,7 +217,9 @@
                         <outlet property="altitudeUnitsSwitch" destination="p0u-g2-gJR" id="Twt-Kt-fSF"/>
                         <outlet property="flashLightsSwitch" destination="Ztv-UL-DeW" id="FWR-tl-Aro"/>
                         <outlet property="playSoundSwitch" destination="qrh-v6-l5u" id="A6G-9Q-Eik"/>
+                        <outlet property="pressureSettingScreen" destination="jym-4A-6dH" id="9Pj-sS-FdT"/>
                         <outlet property="pressureUnitsSwitch" destination="Y4K-ep-JAd" id="18A-aY-3Bo"/>
+                        <outlet property="pressureswitcher" destination="Y4K-ep-JAd" id="7K8-8j-59h"/>
                         <outlet property="vibrateSwitch" destination="S7w-fq-BoQ" id="ekj-oy-SYZ"/>
                     </connections>
                 </viewController>

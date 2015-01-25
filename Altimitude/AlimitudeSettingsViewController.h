@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
+
 
 @interface AlimitudeSettingsViewController : UIViewController
 
@@ -16,7 +18,8 @@
 @property(weak,nonatomic)IBOutlet UISwitch *vibrateSwitch;
 @property(weak,nonatomic)IBOutlet UISwitch *playSoundSwitch;
 @property(weak,nonatomic)IBOutlet UILabel *pressuredatalabel;
-
+@property (weak, nonatomic) IBOutlet UISwitch *pressureswitcher;
+@property (weak, nonatomic) IBOutlet UILabel *pressureSettingScreen;
 
 
 
@@ -25,5 +28,7 @@
 -(IBAction)flashLightsClicked:(id)sender;
 -(IBAction)vibrateClicked:(id)sender;
 -(IBAction)soundClicked:(id)sender;
+-(IBAction)switchvaluechanged:(UISwitch *) pressureswitcher;
+
 
 @end

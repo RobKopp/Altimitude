@@ -13,7 +13,7 @@
 
 
 @interface AlimitudeSettingsViewController ()
-
+@property (nonatomic,strong) CMAltimeter *altimeter;
 @end
 
 @implementation AlimitudeSettingsViewController
@@ -31,11 +31,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if([CMAltimeter isRelativeAltitudeAvailable]){
+        self.altimeter = [[CMAltimeter alloc]init];
+        [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData *altitudeData, NSError *error) 
+            _pressureSettingScreen.text = [NSString stringWithFormat:@"%.02f", altitudeData.pressure.floatValue*0.295333727 ];
+           // _RelativeAltitude.text = [NSString stringWithFormat:@"%.02f m", altitudeData.relativeAltitude.floatValue];
+            /**
+             the "%.02f" are defining the decimals
+             **/
+        }];
+    }
     
-    
-   // self.pressuredatalabel.text = [NSString stringWithFormat:@"%g",[CMAltitudeData.pressure  doubleValue]
     
 }
+
+    //}
 
 -(void)viewWillAppear:(BOOL)animated {
     AlimitudeSharedAppState *sharedInstance =[AlimitudeSharedAppState sharedInstance];
