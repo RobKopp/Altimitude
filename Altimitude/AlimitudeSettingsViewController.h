@@ -20,6 +20,7 @@
 @property(weak,nonatomic)IBOutlet UILabel *pressuredatalabel;
 @property (weak, nonatomic) IBOutlet UISwitch *pressureswitcher;
 @property (weak, nonatomic) IBOutlet UILabel *pressureSettingScreen;
+@property (weak, nonatomic) IBOutlet UILabel *pressureLabel;
 
 
 

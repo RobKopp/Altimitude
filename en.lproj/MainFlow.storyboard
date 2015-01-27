@@ -227,6 +227,7 @@
                         <outlet property="altitudeUnitsSwitch" destination="p0u-g2-gJR" id="Twt-Kt-fSF"/>
                         <outlet property="flashLightsSwitch" destination="Ztv-UL-DeW" id="FWR-tl-Aro"/>
                         <outlet property="playSoundSwitch" destination="qrh-v6-l5u" id="A6G-9Q-Eik"/>
+                        <outlet property="pressureLabel" destination="L2g-Aa-4c4" id="Rlj-rL-XGN"/>
                         <outlet property="pressureSettingScreen" destination="jym-4A-6dH" id="9Pj-sS-FdT"/>
                         <outlet property="pressureUnitsSwitch" destination="Y4K-ep-JAd" id="18A-aY-3Bo"/>
                         <outlet property="pressureswitcher" destination="Y4K-ep-JAd" id="7K8-8j-59h"/>

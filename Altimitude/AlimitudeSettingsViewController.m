@@ -33,29 +33,56 @@
     // Do any additional setup after loading the view.
     
     if ([AlimitudeSharedAppState sharedInstance].pressureUnits == ALTITUDE_INHG_UNITS) {
-        _pressureSettingScreen.text=[NSString stringWithFormat:@"%.02f",[AlimitudeSharedAppState sharedInstance].currentPressure*0.295333727];}
+        _pressureSettingScreen.text=[NSString stringWithFormat:@"%.02f",[AlimitudeSharedAppState sharedInstance].currentPressure*0.295333727];
+    _pressureLabel.text = @"inHg";
+    }
     else {
-        _pressureSettingScreen.text=[NSString stringWithFormat:@"%.2ld",[AlimitudeSharedAppState sharedInstance].currentPressure*10];
+        _pressureSettingScreen.text=[NSString stringWithFormat:@"%.02f",[AlimitudeSharedAppState sharedInstance].currentPressure*10.00];
+           _pressureLabel.text = @"hPa";
     }
 
+    
+    self.altimeter = [[CMAltimeter alloc] init];
+    
+    if([CMAltimeter isRelativeAltitudeAvailable]) {
+        [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData *altitudeData, NSError *error) {
+            if(error != nil) {
+                self.pressureSettingScreen.text = @"Error!";
+            } else {
+                
+                
+                if ([AlimitudeSharedAppState sharedInstance].pressureUnits == ALTITUDE_INHG_UNITS) {
+                    _pressureSettingScreen.text=[NSString stringWithFormat:@"%.02f",altitudeData.pressure.floatValue*0.295333727];
+                    _pressureLabel.text = @"inHg";}
+                else {
+                    _pressureSettingScreen.text=[NSString stringWithFormat:@"%.02f",altitudeData.pressure.floatValue*10];
+                    _pressureLabel.text = @"hPa";
+                
+        
+                }
+            }
+        }];
+    }
+    
+    
+    
     
     
     
     
     //uncomment here to the next obvious statement.
-    //if([CMAltimeter isRelativeAltitudeAvailable])
-    {
-        //self.altimeter = [[CMAltimeter alloc]init];
-   //     [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData *altitudeData, NSError *error)
-        //    _pressureSettingScreen.text = [NSString stringWithFormat:@"%.02f", altitudeData.pressure.floatValue*0.295333727 ];
-         
-         
+    //if([CMAltimeter isRelativeAltitudeAvailable]){
+    //self.altimeter = [[CMAltimeter alloc]init];
+       // [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData *altitudeData, NSError *error)]
+       // _pressureSettingScreen.text = [NSString stringWithFormat:@"%.02f", altitudeData.pressure.floatValue*0.295333727;
+         }
+                                       
         // if ([AlimitudeSharedAppState sharedInstance].pressureUnits == ALTITUDE_INHG_UNITS {
         // _pressureSettingScreen.text=[[NSString stringWithFormat:@"%.02f",altitudeData.pressure.floatValue*0.295333727];
-                    }
+           //         }
         //else {
           //  _pressureSettingScreen.text=[NSString stringWithFormat:@"%.2ld",altitudeData.pressure.floatvalue*10];
-        }
+        //}
                                           
                                           
                                     
@@ -66,13 +93,13 @@
             /**
              the "%.02f" are defining the decimals
              **/
-      //  }];
+    //}];
     //}
                                           
     
                                           
 
-    //}
+   // }
 
 -(void)viewWillAppear:(BOOL)animated {
     AlimitudeSharedAppState *sharedInstance =[AlimitudeSharedAppState sharedInstance];
