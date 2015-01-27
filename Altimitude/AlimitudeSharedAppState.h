@@ -53,6 +53,8 @@ typedef void (^PropertyChangeCallback)(int);
 
 @property(nonatomic) long previousAltitude;
 @property(nonatomic) NSTimeInterval previousAltitudeTimestamp;
+@property(nonatomic) long currentPressure;
+
 
 @property(strong,nonatomic) NSMutableArray *warnings;
 

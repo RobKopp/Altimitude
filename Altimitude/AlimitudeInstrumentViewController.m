@@ -65,6 +65,8 @@
 
                 long currentAltitude = (long)( 145366.45 * ( 1-pow([altitudeData.pressure doubleValue]/101.325, 0.19028) ) );
                 long prevAltitude = [AlimitudeSharedAppState sharedInstance].previousAltitude;
+                [AlimitudeSharedAppState sharedInstance].currentPressure=(long)[altitudeData.pressure doubleValue];
+                
                 NSTimeInterval previousUpdate = [AlimitudeSharedAppState sharedInstance].previousAltitudeTimestamp;
                 
                 NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];

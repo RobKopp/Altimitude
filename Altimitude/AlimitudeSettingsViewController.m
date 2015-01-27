@@ -31,19 +31,46 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if([CMAltimeter isRelativeAltitudeAvailable]){
-        self.altimeter = [[CMAltimeter alloc]init];
-        [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData *altitudeData, NSError *error) 
-            _pressureSettingScreen.text = [NSString stringWithFormat:@"%.02f", altitudeData.pressure.floatValue*0.295333727 ];
+    
+    if ([AlimitudeSharedAppState sharedInstance].pressureUnits == ALTITUDE_INHG_UNITS) {
+        _pressureSettingScreen.text=[NSString stringWithFormat:@"%.02f",[AlimitudeSharedAppState sharedInstance].currentPressure*0.295333727];}
+    else {
+        _pressureSettingScreen.text=[NSString stringWithFormat:@"%.2ld",[AlimitudeSharedAppState sharedInstance].currentPressure*10];
+    }
+
+    
+    
+    
+    
+    //uncomment here to the next obvious statement.
+    //if([CMAltimeter isRelativeAltitudeAvailable])
+    {
+        //self.altimeter = [[CMAltimeter alloc]init];
+   //     [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData *altitudeData, NSError *error)
+        //    _pressureSettingScreen.text = [NSString stringWithFormat:@"%.02f", altitudeData.pressure.floatValue*0.295333727 ];
+         
+         
+        // if ([AlimitudeSharedAppState sharedInstance].pressureUnits == ALTITUDE_INHG_UNITS {
+        // _pressureSettingScreen.text=[[NSString stringWithFormat:@"%.02f",altitudeData.pressure.floatValue*0.295333727];
+                    }
+        //else {
+          //  _pressureSettingScreen.text=[NSString stringWithFormat:@"%.2ld",altitudeData.pressure.floatvalue*10];
+        }
+                                          
+                                          
+                                    
+                                          
+         
+         //the above is what you need to uncomment to make pressure happen.
            // _RelativeAltitude.text = [NSString stringWithFormat:@"%.02f m", altitudeData.relativeAltitude.floatValue];
             /**
              the "%.02f" are defining the decimals
              **/
-        }];
-    }
+      //  }];
+    //}
+                                          
     
-    
-}
+                                          
 
     //}
 
