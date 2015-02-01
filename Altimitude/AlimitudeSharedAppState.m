@@ -19,9 +19,9 @@
        //NSArray *startingValues = @[[NSNumber numberWithInteger:10000],[NSNumber numberWithInteger:12500],[NSNumber numberWithInteger:14000]];
         warnings = [NSMutableArray array];
         
-        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:10000],@"Altitude",@"YES",@"Enabled", @"Warning: You have reached 10,000 ft pressure Altitude. The FAA recommends using supplemental oxygen for any time spent above 10,000 ft.", @"Message", nil]];
-        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:12500],@"Altitude",@"YES",@"Enabled", @"Warning: You have reached 12,500 ft pressure Altitude. The FAA requires using supplemental oxygen for any time beyond 30 minutes spent above 12,500 ft.", @"Message", nil]];
-        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:14000],@"Altitude",@"YES",@"Enabled", @"Warning: DESCEND IMMEDIATELY! You have reached 14,000 ft pressure Altitude. The FAA requires pilots use supplemental oxygen for any time spent above 14,000 ft.", @"Message", nil]];
+        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:10000],@"Altitude",@"YES",@"Enabled", @"Warning: You have reached 10,000 ft pressure Altitude. The FAA recommends using supplemental oxygen for any time spent above 10,000 ft.", @"Message",@"NO",@"Dismissed", nil]];
+        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:12500],@"Altitude",@"YES",@"Enabled", @"Warning: You have reached 12,500 ft pressure Altitude. The FAA requires using supplemental oxygen for any time beyond 30 minutes spent above 12,500 ft.", @"Message",@"NO",@"Dismissed", nil]];
+        [warnings addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:14000],@"Altitude",@"YES",@"Enabled", @"Warning: DESCEND IMMEDIATELY! You have reached 14,000 ft pressure Altitude. The FAA requires pilots use supplemental oxygen for any time spent above 14,000 ft.", @"Message",@"NO",@"Dismissed", nil]];
         
  
         

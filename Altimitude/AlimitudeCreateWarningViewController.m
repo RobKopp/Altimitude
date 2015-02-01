@@ -58,6 +58,7 @@
                                           @"Altitude": warningNumber,
                                           @"Message": self.messageView.text,
                                           @"Enabled": @"YES",
+                                          @"Dismissed":@"NO",
                                           } mutableCopy];
 
         for(int i = 0;i < [warnings count]; ++i) {
