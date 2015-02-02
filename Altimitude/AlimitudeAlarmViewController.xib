@@ -2,11 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlimitudeAlarmViewController">
             <connections>
                 <outlet property="altitudeLabel" destination="bhc-es-L2i" id="62L-dn-5DC"/>
+                <outlet property="messageLabel" destination="2fK-PA-bxG" id="CI7-8X-4Dd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,25 +54,38 @@
                             <rect key="frame" x="121" y="123" width="357" height="95"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15,000" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhc-es-L2i">
-                                    <rect key="frame" x="191" y="20" width="138" height="55"/>
+                                    <rect key="frame" x="172" y="21" width="138" height="55"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altitude" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaG-KX-tFZ">
-                                    <rect key="frame" x="32" y="20" width="153" height="55"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-9v-wrE">
+                                    <rect key="frame" x="318" y="21" width="39" height="54"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure Above:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.35000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="EaG-KX-tFZ">
+                                    <rect key="frame" x="11" y="20" width="153" height="55"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="EaG-KX-tFZ" secondAttribute="height" multiplier="153:55" id="wZA-6l-C1l"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="EaG-KX-tFZ" secondAttribute="bottom" constant="20" id="13M-vm-GXO"/>
-                                <constraint firstItem="EaG-KX-tFZ" firstAttribute="leading" secondItem="mGS-Od-bFV" secondAttribute="leading" constant="32" id="IlG-Ac-kXO"/>
-                                <constraint firstItem="bhc-es-L2i" firstAttribute="top" secondItem="mGS-Od-bFV" secondAttribute="top" constant="20" id="b2P-30-CRc"/>
+                                <constraint firstAttribute="bottom" secondItem="H6B-9v-wrE" secondAttribute="bottom" constant="20" id="2dJ-Pz-hT4"/>
+                                <constraint firstAttribute="trailing" secondItem="H6B-9v-wrE" secondAttribute="trailing" id="6Am-Z4-QbR"/>
+                                <constraint firstItem="H6B-9v-wrE" firstAttribute="top" secondItem="mGS-Od-bFV" secondAttribute="top" constant="21" id="FDd-3D-44v"/>
+                                <constraint firstItem="EaG-KX-tFZ" firstAttribute="leading" secondItem="mGS-Od-bFV" secondAttribute="leading" constant="11" id="IlG-Ac-kXO"/>
+                                <constraint firstItem="bhc-es-L2i" firstAttribute="top" secondItem="mGS-Od-bFV" secondAttribute="top" constant="21" id="b2P-30-CRc"/>
                                 <constraint firstItem="EaG-KX-tFZ" firstAttribute="top" secondItem="mGS-Od-bFV" secondAttribute="top" constant="20" id="cMU-4i-UB1"/>
                                 <constraint firstAttribute="width" constant="357" id="l4f-aL-hsM"/>
-                                <constraint firstAttribute="bottom" secondItem="bhc-es-L2i" secondAttribute="bottom" constant="20" id="qbI-1u-tZ6"/>
+                                <constraint firstItem="H6B-9v-wrE" firstAttribute="leading" secondItem="bhc-es-L2i" secondAttribute="trailing" constant="8" id="lrs-Mp-CyS"/>
+                                <constraint firstAttribute="bottom" secondItem="bhc-es-L2i" secondAttribute="bottom" constant="19" id="qbI-1u-tZ6"/>
                                 <constraint firstAttribute="height" constant="95" id="tto-b1-rng"/>
-                                <constraint firstAttribute="trailing" secondItem="bhc-es-L2i" secondAttribute="trailing" constant="28.5" id="vp9-uf-UST"/>
+                                <constraint firstAttribute="trailing" secondItem="bhc-es-L2i" secondAttribute="trailing" constant="47" id="vp9-uf-UST"/>
                             </constraints>
                         </view>
                     </subviews>

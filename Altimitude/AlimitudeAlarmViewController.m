@@ -22,6 +22,7 @@
     self.view.backgroundColor = [UIColor redColor];
     fadeToColor = [UIColor whiteColor];
     self.altitudeLabel.text = altitudeValue;
+    self.messageLabel.text=messageValue;
 }
 
 - (void)viewDidAppear:(BOOL)animated {

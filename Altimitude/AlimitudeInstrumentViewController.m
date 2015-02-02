@@ -47,10 +47,19 @@
 
         }
     }];
+    
+    NSArray *warnings = [AlimitudeSharedAppState sharedInstance].warnings;
+    for(NSMutableDictionary *warning in warnings) {
+        //if([[warning objectForKey:@"Enabled"] isEqualToString:@"YES"]) {
+        if([[warning objectForKey:@"Dismissed"] isEqualToString:@"YES"]){
+            [warning removeObjectForKey:@"Dismissed"];
+            [warning setObject:@"NO" forKey:@"Dismissed"];
+        }
+    }
+    
+    
     self.testNum = 10;
     [self startAltimeter];
-    
-    
 }
 
 -(void)startAltimeter {
@@ -91,13 +100,25 @@
                 [AlimitudeSharedAppState sharedInstance].previousAltitude = currentAltitude;
                 [AlimitudeSharedAppState sharedInstance].previousAltitudeTimestamp = currentTime;
                 NSArray *warnings = [AlimitudeSharedAppState sharedInstance].warnings;
-                for(NSDictionary *warning in warnings) {
+                //for(NSDictionary *warning in warnings) {
+                 for(NSMutableDictionary *warning in warnings) {
                     if([[warning objectForKey:@"Enabled"] isEqualToString:@"YES"]) {
+                        if([[warning objectForKey:@"Dismissed"] isEqualToString:@"NO"]){
                         NSNumber *altitude = [warning objectForKey:@"Altitude"];
                         if([altitude longValue] <= currentAltitude) {
-                
+                            [warning removeObjectForKey:@"Dismissed"];
+                            [warning setObject:@"YES" forKey:@"Dismissed"];
+                             
                             [self activateWarning:altitude message:[warning objectForKey:@"Message"]];
                             break;
+                        }
+                        } else {
+                          NSNumber *altitude = [warning objectForKey:@"Altitude"];
+                            if([altitude longValue] >= currentAltitude) {
+                                [warning removeObjectForKey:@"Dismissed"];
+                                [warning setObject:@"NO" forKey:@"Dismissed"];
+                                break;
+                        }
                         }
                     }
                 }

@@ -13,8 +13,7 @@
 
 
 @property(weak,nonatomic)IBOutlet UILabel *altitudeLabel;
-@property(weak,nonatomic)IBOutlet UILabel *messageLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 -(void)setMessageStrings:(NSString*) altitude message:(NSString *)message;
 
