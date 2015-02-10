@@ -12,9 +12,9 @@
 #import <math.h>
 #import <AudioToolbox/AudioServices.h>
 #import <AVFoundation/AVFoundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface AlimitudeInstrumentViewController ()
-
+@interface AlimitudeInstrumentViewControllee <CLLocationManagerDelegate>
 @end
 
 @implementation AlimitudeInstrumentViewController
@@ -28,10 +28,44 @@
     return self;
 }
 
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error with location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [errorAlert show];
+    NSLog(@"Error: %@",error.description);
+}
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+[self performSelector:@selector(startAltimeter) withObject:self afterDelay:1];
+
+   // [self startAltimeter];
+  // CLLocation *crnLoc = [locations lastObject];
+    
+    // LOCATIONS are working!
+   // latitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.latitude];
+   // longitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.longitude];
+  //  self.GPSAltitude.text= [NSString stringWithFormat:@"%.0f m",crnLoc.altitude];
+  //  speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
+
+
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //start location manager
+  
+   
+      self.locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
+     self.locationManager.delegate = self;// we set the delegate of locationManager to self.
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // setting the accuracy
+    [self.locationManager requestAlwaysAuthorization];
+       [self.locationManager startUpdatingLocation];  //requesting location updates
+    
+    
+    
     [[AlimitudeSharedAppState sharedInstance] addPropertyChangeCallback:PROPERTY_CHANGE_ALTITUDE_UNITS propertyChangeCallback:^(int altitudeUnitSelection) {
         
         if(altitudeUnitSelection == ALTITUDE_FEET_UNITS) {
@@ -57,10 +91,10 @@
         }
     }
     
-    
     self.testNum = 10;
-    [self startAltimeter];
+//[self startAltimeter];
 }
+
 
 -(void)startAltimeter {
     self.altimeter = [[CMAltimeter alloc] init];
@@ -215,6 +249,10 @@
         }
     }
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

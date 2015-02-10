@@ -14,6 +14,7 @@
 		3B2444351A748F8800CA81B4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B33553D1A745943008BE514 /* MainFlow.storyboard */; };
 		3B2444361A7490CA00CA81B4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B33553D1A745943008BE514 /* MainFlow.storyboard */; };
 		3B3355411A745DC8008BE514 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3355401A745DC8008BE514 /* Launch Screen.xib */; };
+		3B64EF2A1A85B6B1005935D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B64EF291A85B6B1005935D7 /* CoreLocation.framework */; };
 		3BEB81C71A7455A6003DEC9F /* OkoppiBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */; };
 		D415CE3C1A2A5360002A51C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3B1A2A5360002A51C4 /* Foundation.framework */; };
 		D415CE3E1A2A5360002A51C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */; };
@@ -59,6 +60,7 @@
 		3B147AB01A744EB000E3E2C3 /* OkoppiLoadingScreen780.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiLoadingScreen780.png; path = ../../../../Downloads/OkoppiLoadingScreen780.png; sourceTree = "<group>"; };
 		3B33553C1A745943008BE514 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainFlow.storyboard; sourceTree = "<group>"; };
 		3B3355401A745DC8008BE514 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		3B64EF291A85B6B1005935D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiBar.png; path = ../../../../Downloads/OkoppiBar.png; sourceTree = "<group>"; };
 		D415CE381A2A5360002A51C4 /* Altimitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Altimitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D415CE3B1A2A5360002A51C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B64EF2A1A85B6B1005935D7 /* CoreLocation.framework in Frameworks */,
 				D415CE3E1A2A5360002A51C4 /* CoreGraphics.framework in Frameworks */,
 				D415CE401A2A5360002A51C4 /* UIKit.framework in Frameworks */,
 				D415CE3C1A2A5360002A51C4 /* Foundation.framework in Frameworks */,
@@ -146,6 +149,7 @@
 		D415CE3A1A2A5360002A51C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B64EF291A85B6B1005935D7 /* CoreLocation.framework */,
 				D415CE3B1A2A5360002A51C4 /* Foundation.framework */,
 				D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */,
 				D415CE3F1A2A5360002A51C4 /* UIKit.framework */,
@@ -279,6 +283,11 @@
 				TargetAttributes = {
 					D415CE371A2A5360002A51C4 = {
 						DevelopmentTeam = CN666XW7YK;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D415CE521A2A5360002A51C4 = {
 						DevelopmentTeam = CN666XW7YK;
