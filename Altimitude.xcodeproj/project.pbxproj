@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B1426F41AB499C600046A87 /* Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B1426F31AB499C600046A87 /* Alarm.mp3 */; };
 		3B1426F61AB49B8000046A87 /* AlimitudeInstrumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */; };
+		3B1426FA1AB4CA9D00046A87 /* Alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1426F91AB4CA9D00046A87 /* Alarm.caf */; };
+		3B1426FB1AB4CA9D00046A87 /* Alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1426F91AB4CA9D00046A87 /* Alarm.caf */; };
 		3B147AA91A7440AC00E3E2C3 /* App_Icon_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B147AA81A7440AC00E3E2C3 /* App_Icon_180.png */; };
 		3B147AAB1A74415D00E3E2C3 /* App_Icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B147AAA1A74415D00E3E2C3 /* App_Icon_120.png */; };
 		3B2444351A748F8800CA81B4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B33553D1A745943008BE514 /* MainFlow.storyboard */; };
@@ -53,7 +55,7 @@
 
 /* Begin PBXFileReference section */
 		3B1426F31AB499C600046A87 /* Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alarm.mp3; sourceTree = "<group>"; };
-		3B1426F51AB49AC500046A87 /* Alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alarm.caf; sourceTree = "<group>"; };
+		3B1426F91AB4CA9D00046A87 /* Alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alarm.caf; sourceTree = "<group>"; };
 		3B147AA81A7440AC00E3E2C3 /* App_Icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Icon_180.png; sourceTree = "<group>"; };
 		3B147AAA1A74415D00E3E2C3 /* App_Icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Icon_120.png; sourceTree = "<group>"; };
 		3B33553C1A745943008BE514 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainFlow.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				D415CE701A2A611D002A51C4 /* AlimitudeWarningsViewController.h */,
 				D415CE711A2A611D002A51C4 /* AlimitudeWarningsViewController.m */,
 				D415CE731A2A64A4002A51C4 /* AlimitudeInstrumentViewController.h */,
+				3B1426F91AB4CA9D00046A87 /* Alarm.caf */,
 				D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */,
 				D46BD6F21A4B99CE003FD15A /* AlimitudeAlarmViewController.h */,
 				D46BD6F31A4B99CE003FD15A /* AlimitudeAlarmViewController.m */,
@@ -222,7 +225,6 @@
 				3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */,
 				D46BC33B1A4F326E00AB68EB /* Okoppiaviation.png */,
 				3B1426F31AB499C600046A87 /* Alarm.mp3 */,
-				3B1426F51AB49AC500046A87 /* Alarm.caf */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -318,6 +320,7 @@
 				D46BC33D1A4F326E00AB68EB /* Okoppiaviation.png in Resources */,
 				3B3355411A745DC8008BE514 /* Launch Screen.xib in Resources */,
 				D46BC33F1A4F32DE00AB68EB /* App_Icon.png in Resources */,
+				3B1426FA1AB4CA9D00046A87 /* Alarm.caf in Resources */,
 				D415CE4E1A2A5360002A51C4 /* Images.xcassets in Resources */,
 				3B147AAB1A74415D00E3E2C3 /* App_Icon_120.png in Resources */,
 				3B2444351A748F8800CA81B4 /* MainFlow.storyboard in Resources */,
@@ -330,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1426FB1AB4CA9D00046A87 /* Alarm.caf in Resources */,
 				D415CE5F1A2A5360002A51C4 /* InfoPlist.strings in Resources */,
 				3B2444361A7490CA00CA81B4 /* MainFlow.storyboard in Resources */,
 			);

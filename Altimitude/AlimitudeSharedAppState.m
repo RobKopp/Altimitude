@@ -82,7 +82,7 @@
 -(BOOL)flashLightOnWarning {
     NSNumber *active = [self.appState objectForKey:FLASH_KEY];
     if(active == nil) {
-        return 0;
+        return 1;
     }
     
     return [active intValue] == 1 ? YES : NO;
@@ -100,7 +100,7 @@
 -(BOOL)vibrateOnWarning {
     NSNumber *active = [self.appState objectForKey:VIBRATE_KEY];
     if(active == nil) {
-        return 0;
+        return 1;
     }
     
     return [active intValue] == 1 ? YES : NO;
@@ -118,7 +118,7 @@
 -(BOOL)playSoundOnWarning {
     NSNumber *active = [self.appState objectForKey:SOUND_KEY];
     if(active == nil) {
-        return 0;
+        return 1;
     }
     
     return [active intValue] == 1 ? YES : NO;

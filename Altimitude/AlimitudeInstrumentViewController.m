@@ -306,7 +306,9 @@
         alarm.fireDate = now;
         alarm.timeZone = [NSTimeZone defaultTimeZone];
         alarm.repeatInterval = 0;
-        alarm.soundName = @"Alarm.caf";
+        //alarm.ApplicationIconBadgeNumber = 1;
+        //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
+        alarm.soundName =@"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
         alarm.alertBody = [NSString stringWithFormat:@"%@ ft:%@\r\rOpen the app to silence the alarm.", warningValue, messageValue];
         
         [app scheduleLocalNotification:alarm];
