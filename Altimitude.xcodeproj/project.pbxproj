@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1426F41AB499C600046A87 /* Alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B1426F31AB499C600046A87 /* Alarm.mp3 */; };
+		3B1426F61AB49B8000046A87 /* AlimitudeInstrumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */; };
 		3B147AA91A7440AC00E3E2C3 /* App_Icon_180.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B147AA81A7440AC00E3E2C3 /* App_Icon_180.png */; };
 		3B147AAB1A74415D00E3E2C3 /* App_Icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B147AAA1A74415D00E3E2C3 /* App_Icon_120.png */; };
-		3B147AAD1A74473700E3E2C3 /* OkoppiLoadingScreen780.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B147AAC1A74473700E3E2C3 /* OkoppiLoadingScreen780.jpg */; };
-		3B147AB11A744EB000E3E2C3 /* OkoppiLoadingScreen780.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B147AB01A744EB000E3E2C3 /* OkoppiLoadingScreen780.png */; };
 		3B2444351A748F8800CA81B4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B33553D1A745943008BE514 /* MainFlow.storyboard */; };
 		3B2444361A7490CA00CA81B4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B33553D1A745943008BE514 /* MainFlow.storyboard */; };
 		3B3355411A745DC8008BE514 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3355401A745DC8008BE514 /* Launch Screen.xib */; };
@@ -28,8 +28,6 @@
 		D415CE571A2A5360002A51C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3F1A2A5360002A51C4 /* UIKit.framework */; };
 		D415CE5F1A2A5360002A51C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D415CE5D1A2A5360002A51C4 /* InfoPlist.strings */; };
 		D415CE611A2A5360002A51C4 /* AltimitudeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE601A2A5360002A51C4 /* AltimitudeTests.m */; };
-		D415CE6E1A2A575B002A51C4 /* AltimeterImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D415CE6C1A2A575B002A51C4 /* AltimeterImage.png */; };
-		D415CE6F1A2A575B002A51C4 /* VerticalSpeedImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D415CE6D1A2A575B002A51C4 /* VerticalSpeedImage.jpg */; };
 		D415CE721A2A611D002A51C4 /* AlimitudeWarningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE711A2A611D002A51C4 /* AlimitudeWarningsViewController.m */; };
 		D415CE751A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE741A2A64A4002A51C4 /* AlimitudeInstrumentViewController.m */; };
 		D415CE781A2A659B002A51C4 /* AlimitudeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D415CE771A2A659B002A51C4 /* AlimitudeSettingsViewController.m */; };
@@ -54,14 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B1426F31AB499C600046A87 /* Alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Alarm.mp3; sourceTree = "<group>"; };
+		3B1426F51AB49AC500046A87 /* Alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alarm.caf; sourceTree = "<group>"; };
 		3B147AA81A7440AC00E3E2C3 /* App_Icon_180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Icon_180.png; sourceTree = "<group>"; };
 		3B147AAA1A74415D00E3E2C3 /* App_Icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = App_Icon_120.png; sourceTree = "<group>"; };
-		3B147AAC1A74473700E3E2C3 /* OkoppiLoadingScreen780.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = OkoppiLoadingScreen780.jpg; path = ../../../../Downloads/OkoppiLoadingScreen780.jpg; sourceTree = "<group>"; };
-		3B147AB01A744EB000E3E2C3 /* OkoppiLoadingScreen780.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiLoadingScreen780.png; path = ../../../../Downloads/OkoppiLoadingScreen780.png; sourceTree = "<group>"; };
 		3B33553C1A745943008BE514 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainFlow.storyboard; sourceTree = "<group>"; };
 		3B3355401A745DC8008BE514 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		3B64EF291A85B6B1005935D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiBar.png; path = ../../../../Downloads/OkoppiBar.png; sourceTree = "<group>"; };
+		3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiBar.png; path = /Users/nkopp2/Downloads/OkoppiBar.png; sourceTree = "<absolute>"; };
 		D415CE381A2A5360002A51C4 /* Altimitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Altimitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D415CE3B1A2A5360002A51C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,8 +76,6 @@
 		D415CE5C1A2A5360002A51C4 /* AltimitudeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AltimitudeTests-Info.plist"; sourceTree = "<group>"; };
 		D415CE5E1A2A5360002A51C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D415CE601A2A5360002A51C4 /* AltimitudeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AltimitudeTests.m; sourceTree = "<group>"; };
-		D415CE6C1A2A575B002A51C4 /* AltimeterImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AltimeterImage.png; sourceTree = "<group>"; };
-		D415CE6D1A2A575B002A51C4 /* VerticalSpeedImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VerticalSpeedImage.jpg; sourceTree = "<group>"; };
 		D415CE701A2A611D002A51C4 /* AlimitudeWarningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeWarningsViewController.h; sourceTree = "<group>"; };
 		D415CE711A2A611D002A51C4 /* AlimitudeWarningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlimitudeWarningsViewController.m; sourceTree = "<group>"; };
 		D415CE731A2A64A4002A51C4 /* AlimitudeInstrumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeInstrumentViewController.h; sourceTree = "<group>"; };
@@ -162,8 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				D46BC3391A4F324100AB68EB /* Images */,
-				D415CE6C1A2A575B002A51C4 /* AltimeterImage.png */,
-				D415CE6D1A2A575B002A51C4 /* VerticalSpeedImage.jpg */,
 				D415CE4A1A2A5360002A51C4 /* AlimitudeAppDelegate.h */,
 				D415CE4B1A2A5360002A51C4 /* AlimitudeAppDelegate.m */,
 				D415CE4D1A2A5360002A51C4 /* Images.xcassets */,
@@ -224,11 +218,11 @@
 			children = (
 				3B147AAA1A74415D00E3E2C3 /* App_Icon_120.png */,
 				3B147AA81A7440AC00E3E2C3 /* App_Icon_180.png */,
-				3B147AAC1A74473700E3E2C3 /* OkoppiLoadingScreen780.jpg */,
 				D46BC33E1A4F32DE00AB68EB /* App_Icon.png */,
-				3B147AB01A744EB000E3E2C3 /* OkoppiLoadingScreen780.png */,
 				3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */,
 				D46BC33B1A4F326E00AB68EB /* Okoppiaviation.png */,
+				3B1426F31AB499C600046A87 /* Alarm.mp3 */,
+				3B1426F51AB49AC500046A87 /* Alarm.caf */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -318,20 +312,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B147AB11A744EB000E3E2C3 /* OkoppiLoadingScreen780.png in Resources */,
+				3B1426F41AB499C600046A87 /* Alarm.mp3 in Resources */,
 				3B147AA91A7440AC00E3E2C3 /* App_Icon_180.png in Resources */,
 				D415CE461A2A5360002A51C4 /* InfoPlist.strings in Resources */,
 				D46BC33D1A4F326E00AB68EB /* Okoppiaviation.png in Resources */,
 				3B3355411A745DC8008BE514 /* Launch Screen.xib in Resources */,
 				D46BC33F1A4F32DE00AB68EB /* App_Icon.png in Resources */,
 				D415CE4E1A2A5360002A51C4 /* Images.xcassets in Resources */,
-				3B147AAD1A74473700E3E2C3 /* OkoppiLoadingScreen780.jpg in Resources */,
 				3B147AAB1A74415D00E3E2C3 /* App_Icon_120.png in Resources */,
 				3B2444351A748F8800CA81B4 /* MainFlow.storyboard in Resources */,
-				D415CE6F1A2A575B002A51C4 /* VerticalSpeedImage.jpg in Resources */,
 				3BEB81C71A7455A6003DEC9F /* OkoppiBar.png in Resources */,
 				D46BD6F61A4B99CE003FD15A /* AlimitudeAlarmViewController.xib in Resources */,
-				D415CE6E1A2A575B002A51C4 /* AltimeterImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1426F61AB49B8000046A87 /* AlimitudeInstrumentViewController.m in Sources */,
 				D415CE611A2A5360002A51C4 /* AltimitudeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

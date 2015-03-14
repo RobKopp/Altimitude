@@ -28,44 +28,50 @@
     return self;
 }
 
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error with location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [errorAlert show];
-    NSLog(@"Error: %@",error.description);
-}
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-[self performSelector:@selector(startAltimeter) withObject:self afterDelay:1];
-
-   // [self startAltimeter];
-  // CLLocation *crnLoc = [locations lastObject];
-    
-    // LOCATIONS are working!
-   // latitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.latitude];
-   // longitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.longitude];
-  //  self.GPSAltitude.text= [NSString stringWithFormat:@"%.0f m",crnLoc.altitude];
-  //  speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
-
-
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //start location manager
+   if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_STARTED);
+    {
+ //pull up the alarm view controller
+    }
+    
+    
+    if ([self.bgWarningsSwitch isOn]) {
+        UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring is active.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [errorAlert show];
+        
+        [self startLocationManager];
+    } else {
+        [self.locationManager stopUpdatingLocation];
+        self.locationManager = nil;
+    }
+    
+  //  UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"This app is NOT certified by the FAA.  This app should only be used for secondary situational awareness only." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+  //  [errorAlert show];
+    
+
+
+    //set the switch
+    [self.bgWarningsSwitch addTarget:self
+                      action:@selector(stateChanged:) forControlEvents:UIControlEventValueChanged];
+
+    AlimitudeSharedAppState *sharedInstance =[AlimitudeSharedAppState sharedInstance]; //set whether BG mode on or off for switch
+    [self.bgWarningsSwitch setOn:sharedInstance.useBGMode];
+    
+    if ([self.bgWarningsSwitch isOn]) {
+        UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring may drain battery when your phone is asleep.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [errorAlert show];
+        
+        [self startLocationManager];
+    } else {
+        [self.locationManager stopUpdatingLocation];
+        self.locationManager = nil;
+    }
+    
   
-   
-      self.locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
-     self.locationManager.delegate = self;// we set the delegate of locationManager to self.
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // setting the accuracy
-    [self.locationManager requestAlwaysAuthorization];
-       [self.locationManager startUpdatingLocation];  //requesting location updates
-    
-    
-    
     [[AlimitudeSharedAppState sharedInstance] addPropertyChangeCallback:PROPERTY_CHANGE_ALTITUDE_UNITS propertyChangeCallback:^(int altitudeUnitSelection) {
         
         if(altitudeUnitSelection == ALTITUDE_FEET_UNITS) {
@@ -92,7 +98,7 @@
     }
     
     self.testNum = 10;
-//[self startAltimeter];
+    [self startAltimeter];
 }
 
 
@@ -142,7 +148,15 @@
                         if([altitude longValue] <= currentAltitude) {
                             [warning removeObjectForKey:@"Dismissed"];
                             [warning setObject:@"YES" forKey:@"Dismissed"];
-                             
+                            //check whether app is in background or foreground.  If in background, ring a local notification.
+                            
+                            if([[UIApplication sharedApplication] applicationState] != UIApplicationStateActive){
+                                
+                                [self ringThePressureLocalNotification:altitude message:[warning objectForKey:@"Message"]];
+                                
+                                
+                            } else
+                            
                             [self activateWarning:altitude message:[warning objectForKey:@"Message"]];
                             break;
                         }
@@ -208,7 +222,7 @@
             [[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] unlockForConfiguration];
         }
         
-        [self performSelector:@selector(performFlash) withObject:self afterDelay:1.0];
+        [self performSelector:@selector(performFlash) withObject:self afterDelay:0.2];
     } else {
         if ([[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] hasTorch] &&
             [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo].torchMode == AVCaptureTorchModeOn)
@@ -252,7 +266,114 @@
 
 
 
+- (void) ringThePressureLocalNotification:(NSNumber *)warningValue message:(NSString *)messageValue {
+    if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {
+        
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setGroupingSeparator: [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
+        [formatter setGroupingSize:3];
+        [formatter setUsesGroupingSeparator:YES];
+        
+        NSString *altValue = [formatter stringFromNumber:warningValue];
+        
+        [AlimitudeSharedAppState sharedInstance].alarmState = ALARM_STATE_STARTED;
+        AlimitudeAlarmViewController *alarmView = [AlimitudeAlarmViewController new];
+        [alarmView setMessageStrings:altValue message:messageValue];
+        [self presentViewController:alarmView animated:YES completion:nil];
+        
+        if([AlimitudeSharedAppState sharedInstance].vibrateOnWarning) {
+            [self performVibration];
+        }
+        
+        if([AlimitudeSharedAppState sharedInstance].flashLightOnWarning) {
+            [self performFlash];
+        }
+    
+    
+    
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray*    oldNotifications = [app scheduledLocalNotifications];
+    
+    // Clear out the old notification before scheduling a new one.
+    if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+    
+    // Create a new notification.
+    UILocalNotification* alarm = [[UILocalNotification alloc] init];
+    if (alarm)
+    {
+        NSDate *now = [[NSDate alloc] init];
+        alarm.fireDate = now;
+        alarm.timeZone = [NSTimeZone defaultTimeZone];
+        alarm.repeatInterval = 0;
+        alarm.soundName = @"Alarm.caf";
+        alarm.alertBody = [NSString stringWithFormat:@"%@ ft:%@\r\rOpen the app to silence the alarm.", warningValue, messageValue];
+        
+        [app scheduleLocalNotification:alarm];
+    }
+    }
+}
+                        
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    // UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error with location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    //  [errorAlert show];
+    //NSLog(@"Error: %@",error.description);
+}
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    [self performSelector:@selector(startAltimeter) withObject:self afterDelay:1];
+    
+    // [self startAltimeter];
+    // CLLocation *crnLoc = [locations lastObject];
+    
+    // LOCATIONS are working!
+    // latitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.latitude];
+    // longitude.text = [NSString stringWithFormat:@"%.8f",crnLoc.coordinate.longitude];
+    //  self.GPSAltitude.text= [NSString stringWithFormat:@"%.0f m",crnLoc.altitude];
+    //  speed.text = [NSString stringWithFormat:@"%.1f m/s", crnLoc.speed];
+    
+    
+}
 
+
+-(void)startLocationManager
+{
+    
+    self.locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
+    self.locationManager.delegate = self;// we set the delegate of locationManager to self.
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers; // setting the accuracy
+    [self.locationManager requestAlwaysAuthorization];
+    [self.locationManager startUpdatingLocation];  //requesting location updates
+    
+    if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning: Unable to Perform Background Monitoring!"
+                                                        message:@"We require access to your location to monitor the pressure in the background, please go to Settings and turn on Location Service for this app."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+
+
+- (void)stateChanged:(UISwitch *)switchState
+{
+  if ([switchState isOn]) {
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring may drain battery when your phone is asleep.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+      [errorAlert show];
+      
+    [self startLocationManager];
+} else {
+        [self.locationManager stopUpdatingLocation];
+      self.locationManager = nil;
+  }
+
+    BOOL isSelected = ((UISwitch*)switchState).isOn;
+        [AlimitudeSharedAppState sharedInstance].useBGMode = isSelected;
+    
+    //[AlimitudeSharedAppState sharedInstance].playSoundOnWarning = isSelected;
+}
 
 - (void)didReceiveMemoryWarning
 {

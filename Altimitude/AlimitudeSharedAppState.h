@@ -22,6 +22,7 @@
 #define PROPERTY_CHANGE_FLASH_LIGHT_CHANGE @"flashLight"
 #define PROPERTY_CHANGE_VIBRATE_CHANGE @"vibrate"
 #define PROPERTY_CHANGE_PLAY_SOUND_CHANGE @"sound"
+#define PROPERTY_CHANGE_BG_Mode @"bgmode"
 
 #define WARNINGS_APP_STATE_KEY @"Warnings"
 #define ALTITUDE_UNITS_KEY @"AltUnits"
@@ -29,6 +30,7 @@
 #define FLASH_KEY @"Flash"
 #define VIBRATE_KEY @"Vibrate"
 #define SOUND_KEY @"Sound"
+#define BG_KEY @"BGMode"
 
 
 @interface AlimitudeSharedAppState : NSObject
@@ -46,6 +48,8 @@ typedef void (^PropertyChangeCallback)(int);
 @property(nonatomic) BOOL vibrateOnWarning;
 
 @property(nonatomic) BOOL playSoundOnWarning;
+
+@property(nonatomic) BOOL useBGMode;
 
 @property (nonatomic) int alarmState;
 

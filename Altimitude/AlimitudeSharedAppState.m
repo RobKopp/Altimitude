@@ -133,6 +133,24 @@
     }
 }
 
+-(BOOL)useBGMode {
+    NSNumber *active = [self.appState objectForKey:BG_KEY];
+    if(active == nil) {
+        return 0;
+    }
+    
+    return [active intValue] == 1 ? YES : NO;
+}
+
+-(void)setUseBGMode:(BOOL)useBGMode {
+    [self.appState setObject:[NSNumber numberWithInt:useBGMode ? 1 : 0] forKey:BG_KEY];
+    [self saveState];
+    if([self.propertyChangeCallbacks valueForKey:PROPERTY_CHANGE_BG_Mode]) {
+        PropertyChangeCallback callback = [self.propertyChangeCallbacks valueForKey:PROPERTY_CHANGE_BG_Mode];
+        callback(useBGMode == YES ? 1 : 0);
+    }
+}
+
 -(void)addPropertyChangeCallback:(NSString *)property propertyChangeCallback:(PropertyChangeCallback)propertyChangeCallback{
 
     [self.propertyChangeCallbacks setValue:propertyChangeCallback forKeyPath:property];

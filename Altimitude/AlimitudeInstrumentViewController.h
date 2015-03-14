@@ -10,17 +10,19 @@
 #import <CoreMotion/CoreMotion.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface AlimitudeInstrumentViewController : UIViewController <CLLocationManagerDelegate>
+@interface AlimitudeInstrumentViewController : UIViewController <CLLocationManagerDelegate,UIAlertViewDelegate>
 @property(weak,nonatomic)IBOutlet UILabel *altitude;
 @property(weak,nonatomic)IBOutlet UILabel *altitudeUnits;
 @property(weak,nonatomic)IBOutlet UILabel *verticalSpeed;
 @property(weak,nonatomic)IBOutlet UILabel *verticalSpeedUnits;
 @property(weak,nonatomic)IBOutlet UILabel *verticalSpeedTitle;
 @property(weak,nonatomic)IBOutlet UISwitch *debugOption;
+@property (strong, nonatomic) IBOutlet UISwitch *bgWarningsSwitch;
 @property(nonatomic) int testNum;
 @property(strong,nonatomic)CMAltimeter *altimeter;
 @property (weak, nonatomic) IBOutlet UILabel *GPSAltitude;
 @property(strong,nonatomic)CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 -(IBAction)debugOptionChange:(id)sender;
+-(IBAction)bgWarningSwitch:(id)sender;
 @end
