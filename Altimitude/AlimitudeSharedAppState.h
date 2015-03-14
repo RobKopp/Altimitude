@@ -67,5 +67,7 @@ typedef void (^PropertyChangeCallback)(int);
 +(instancetype)sharedInstance;
 
 -(void)addPropertyChangeCallback:(NSString *)property propertyChangeCallback:(PropertyChangeCallback)propertyChangeCallback;
+-(void)saveState;
+
 
 @end

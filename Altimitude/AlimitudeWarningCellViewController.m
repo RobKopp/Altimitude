@@ -31,6 +31,8 @@
             [item setObject:value forKey:@"Enabled"];
         }
     }
+    [[AlimitudeSharedAppState sharedInstance] saveState];
+    
 }
 
 @end

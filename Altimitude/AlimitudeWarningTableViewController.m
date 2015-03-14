@@ -24,9 +24,14 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+ 
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.allowsSelectionDuringEditing = YES;
     self.tableView.allowsSelection = NO;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +42,9 @@
 -(void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
     [super viewWillAppear:animated];
+    if(!self.editing){
+    [self setEditing: YES animated: YES];
+     }
 }
 
 #pragma mark - Table view data source
@@ -142,6 +150,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [[AlimitudeSharedAppState sharedInstance].warnings removeObjectAtIndex:indexPath.row];
+        [[AlimitudeSharedAppState sharedInstance] saveState];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         [self setEditing:NO animated:NO];

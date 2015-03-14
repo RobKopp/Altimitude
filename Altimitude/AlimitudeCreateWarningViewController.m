@@ -38,6 +38,7 @@
     if(self.warning != nil) {
         self.warningField.text = [NSString stringWithFormat:@"%d", [[self.warning objectForKey:@"Altitude"] intValue]];
         self.messageView.text = [self.warning objectForKey:@"Message"];
+        self.warningField.enabled=NO;
     }
     self.unitLabel.text = [AlimitudeSharedAppState sharedInstance].altitudeUnits == ALTITUDE_FEET_UNITS ? @"ft" : @"m";
     editing = NO;
@@ -67,6 +68,7 @@
             long warningAltitude = [[warning objectForKey:@"Altitude"] longValue];
             if(warningAltitude == [warningNumber longValue]) {
                 [warning setObject:@"YES" forKey:@"Enabled"];
+                [warning setObject:self.messageView.text forKey:@"Message"];
                 foundWarning = YES;
                 break;
             }else if(warningAltitude > [warningNumber longValue]) {
@@ -93,6 +95,7 @@
                          completion:^(BOOL finished) {
                              self.savedText.hidden = YES;
                          }];
+            [self.navigationController popViewControllerAnimated:YES];
     } else {
         
         if([self.messageView isFirstResponder]) {
