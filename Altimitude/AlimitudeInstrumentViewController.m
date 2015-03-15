@@ -254,7 +254,13 @@
         [AlimitudeSharedAppState sharedInstance].alarmState = ALARM_STATE_STARTED;
         AlimitudeAlarmViewController *alarmView = [AlimitudeAlarmViewController new];
         [alarmView setMessageStrings:altValue message:messageValue];
-        [self presentViewController:alarmView animated:YES completion:nil];
+        
+        
+        UIViewController *presenter = ((UINavigationController *)self.parentViewController).topViewController;
+        while(presenter.presentedViewController != nil) {
+            presenter = presenter.presentedViewController;
+        }
+        [presenter presentViewController:alarmView animated:YES completion:nil];
         
         if([AlimitudeSharedAppState sharedInstance].vibrateOnWarning) {
             [self performVibration];
@@ -271,25 +277,10 @@
 - (void) ringThePressureLocalNotification:(NSNumber *)warningValue message:(NSString *)messageValue {
     if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {
         
-        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-        [formatter setGroupingSeparator: [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
-        [formatter setGroupingSize:3];
-        [formatter setUsesGroupingSeparator:YES];
         
-        NSString *altValue = [formatter stringFromNumber:warningValue];
         
-        [AlimitudeSharedAppState sharedInstance].alarmState = ALARM_STATE_STARTED;
-        AlimitudeAlarmViewController *alarmView = [AlimitudeAlarmViewController new];
-        [alarmView setMessageStrings:altValue message:messageValue];
-        [self presentViewController:alarmView animated:YES completion:nil];
-        
-        if([AlimitudeSharedAppState sharedInstance].vibrateOnWarning) {
-            [self performVibration];
-        }
-        
-        if([AlimitudeSharedAppState sharedInstance].flashLightOnWarning) {
-            [self performFlash];
-        }
+    //Show the warning
+    [self activateWarning:warningValue message:messageValue];
     
     
     
@@ -310,7 +301,7 @@
         alarm.repeatInterval = 0;
         //alarm.ApplicationIconBadgeNumber = 1;
         //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
-        alarm.soundName =@"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
+        alarm.soundName =@"Images/Alarm.caf";
         alarm.alertBody = [NSString stringWithFormat:@"%@ ft:%@\r\rOpen the app to silence the alarm.", warningValue, messageValue];
         
         [app scheduleLocalNotification:alarm];
@@ -355,7 +346,7 @@ if (alarm)
     alarm.repeatInterval = NSCalendarUnitHour;
     //alarm.ApplicationIconBadgeNumber = 1;
     //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
-    alarm.soundName =@"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
+    alarm.soundName =@"Images/Alarm.caf";
     alarm.alertBody = @"PAWS is monitoring the Cabin Pressure Altitude in the background.  Open the app and deselect enable background warnings to end.";
     
     [app scheduleLocalNotification:alarm];
