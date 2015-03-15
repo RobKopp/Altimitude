@@ -17,6 +17,7 @@
 		3B2444361A7490CA00CA81B4 /* MainFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B33553D1A745943008BE514 /* MainFlow.storyboard */; };
 		3B3355411A745DC8008BE514 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3355401A745DC8008BE514 /* Launch Screen.xib */; };
 		3B64EF2A1A85B6B1005935D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B64EF291A85B6B1005935D7 /* CoreLocation.framework */; };
+		3BDE4CF71AB5EC1000DE696B /* alarm2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3BDE4CF61AB5EC1000DE696B /* alarm2.caf */; };
 		3BEB81C71A7455A6003DEC9F /* OkoppiBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */; };
 		D415CE3C1A2A5360002A51C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3B1A2A5360002A51C4 /* Foundation.framework */; };
 		D415CE3E1A2A5360002A51C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */; };
@@ -61,7 +62,8 @@
 		3B33553C1A745943008BE514 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainFlow.storyboard; sourceTree = "<group>"; };
 		3B3355401A745DC8008BE514 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		3B64EF291A85B6B1005935D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiBar.png; path = /Users/nkopp2/Downloads/OkoppiBar.png; sourceTree = "<absolute>"; };
+		3BDE4CF61AB5EC1000DE696B /* alarm2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm2.caf; sourceTree = "<group>"; };
+		3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OkoppiBar.png; path = ../../../../../../Downloads/OkoppiBar.png; sourceTree = "<group>"; };
 		D415CE381A2A5360002A51C4 /* PAWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAWS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D415CE3B1A2A5360002A51C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -223,6 +225,7 @@
 				D46BC33E1A4F32DE00AB68EB /* App_Icon.png */,
 				3BEB81C61A7455A6003DEC9F /* OkoppiBar.png */,
 				D46BC33B1A4F326E00AB68EB /* Okoppiaviation.png */,
+				3BDE4CF61AB5EC1000DE696B /* alarm2.caf */,
 				3B1426F91AB4CA9D00046A87 /* Alarm.caf */,
 				3B1426F31AB499C600046A87 /* Alarm.mp3 */,
 			);
@@ -314,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BDE4CF71AB5EC1000DE696B /* alarm2.caf in Resources */,
 				3B1426F41AB499C600046A87 /* Alarm.mp3 in Resources */,
 				3B147AA91A7440AC00E3E2C3 /* App_Icon_180.png in Resources */,
 				D415CE461A2A5360002A51C4 /* InfoPlist.strings in Resources */,

@@ -305,7 +305,7 @@
         alarm.repeatInterval = 0;
         //alarm.ApplicationIconBadgeNumber = 1;
         //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
-        alarm.soundName =@"Images/Alarm.caf";
+        alarm.soundName =@"alarm2.caf";
         alarm.alertBody = [NSString stringWithFormat:@"%@ ft: %@\r\rOpen the app to silence the alarm.", warningValue, messageValue];
         
         [app scheduleLocalNotification:alarm];
