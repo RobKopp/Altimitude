@@ -209,6 +209,10 @@
 -(void)performFlash {
     if([AlimitudeSharedAppState sharedInstance].alarmState != ALARM_STATE_SILENCED) {
         
+     //   NSLog(@"%ld",[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo].torchMode);
+               
+        
+        
         if ([[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] hasTorch] &&
             [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo].torchMode == AVCaptureTorchModeOn)
         {
@@ -302,7 +306,7 @@
         //alarm.ApplicationIconBadgeNumber = 1;
         //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
         alarm.soundName =@"Images/Alarm.caf";
-        alarm.alertBody = [NSString stringWithFormat:@"%@ ft:%@\r\rOpen the app to silence the alarm.", warningValue, messageValue];
+        alarm.alertBody = [NSString stringWithFormat:@"%@ ft: %@\r\rOpen the app to silence the alarm.", warningValue, messageValue];
         
         [app scheduleLocalNotification:alarm];
     }
@@ -347,7 +351,7 @@ if (alarm)
     //alarm.ApplicationIconBadgeNumber = 1;
     //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
     alarm.soundName =@"Images/Alarm.caf";
-    alarm.alertBody = @"PAWS is monitoring the Cabin Pressure Altitude in the background.  Open the app and deselect enable background warnings to end.";
+    alarm.alertBody = @"PAWS is monitoring the Cabin Pressure Altitude in the background.  If this is no longer needed, open the app and deselect enable background warnings.";
     
     [app scheduleLocalNotification:alarm];
 }
@@ -365,12 +369,28 @@ if (alarm)
     
     if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning: Unable to Perform Background Monitoring!"
-                                                        message:@"We require access to your location to monitor the pressure in the background, please go to Settings and turn on Location Service for this app."
+                                                        message:@"We require access to your location to monitor the pressure in the background, please go to Settings> Privacy > Location Services and turn on Always for this app. Location data is not collected or sent to the developer but only used to provide Warnings in the background."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-    }
+         }
+        UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+        if (grantedSettings.types == UIUserNotificationTypeNone) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning: Notifications disabled."
+                                                            message:@"To view Pressure Alerts while in the background. Please turn on notifications for this app by going to Settings>Notifications>PAWS and allowing notifications and sounds."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            NSLog(@"disabled");
+        }
+        else if (grantedSettings.types & UIUserNotificationTypeSound & UIUserNotificationTypeAlert ){
+            NSLog(@"Sound and alert permissions ");
+        }
+        else if (grantedSettings.types  & UIUserNotificationTypeAlert){
+            NSLog(@"Alert Permission Granted");
+        }
 }
 
 

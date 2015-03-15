@@ -53,6 +53,19 @@
     if(!editing) {
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         NSNumber *warningNumber = [formatter numberFromString:self.warningField.text ];
+        if( warningNumber== nil)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Altitude Needed!"
+                                                            message:@"You need to enter an altitude in the altitude box to save this warning."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else {
+        
+        
+        //NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        //NSNumber *warningNumber = [formatter numberFromString:self.warningField.text ];
         [self.warningField resignFirstResponder];
         NSMutableArray *warnings = [[AlimitudeSharedAppState sharedInstance] warnings];
         BOOL foundWarning = NO;
@@ -95,7 +108,7 @@
                          completion:^(BOOL finished) {
                              self.savedText.hidden = YES;
                          }];
-            [self.navigationController popViewControllerAnimated:YES];
+            [self.navigationController popViewControllerAnimated:YES];}
     } else {
         
         if([self.messageView isFirstResponder]) {

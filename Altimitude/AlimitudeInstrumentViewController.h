@@ -24,5 +24,4 @@
 @property(strong,nonatomic)CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *location;
 -(IBAction)debugOptionChange:(id)sender;
--(IBAction)bgWarningSwitch:(id)sender;
 @end
