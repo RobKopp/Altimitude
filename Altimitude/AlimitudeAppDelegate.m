@@ -14,7 +14,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"firstBoot"] == nil) {
+
+    
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"This application is not certified by the FAA.  This application should be used as only as a back up to supplement your situational awareness and is not a replacement for any airplane instrument or warning system. Cabin Pressure will only be monitored in the background when enabled from the main screen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+   [errorAlert show];
+    
+      [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstBoot"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
      [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        
+    
     
     return YES;
 }
@@ -44,6 +57,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    //cancel any scheduled notifications
+    [[UIApplication sharedApplication]cancelAllLocalNotifications];
+
 }
 
 @end

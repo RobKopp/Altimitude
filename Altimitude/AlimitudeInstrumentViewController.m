@@ -42,11 +42,13 @@
     if ([self.bgWarningsSwitch isOn]) {
         UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring is active.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [errorAlert show];
+              [self startBGNotificationReminderService];
         
         [self startLocationManager];
     } else {
         [self.locationManager stopUpdatingLocation];
         self.locationManager = nil;
+            [[UIApplication sharedApplication]cancelAllLocalNotifications];
     }
     
   //  UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"This app is NOT certified by the FAA.  This app should only be used for secondary situational awareness only." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -62,7 +64,7 @@
     [self.bgWarningsSwitch setOn:sharedInstance.useBGMode];
     
     if ([self.bgWarningsSwitch isOn]) {
-        UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring may drain battery when your phone is asleep.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring will drain battery when your phone is asleep.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [errorAlert show];
         
         [self startLocationManager];
@@ -292,11 +294,11 @@
     
     
     UIApplication* app = [UIApplication sharedApplication];
-    NSArray*    oldNotifications = [app scheduledLocalNotifications];
+  //  NSArray*    oldNotifications = [app scheduledLocalNotifications];
     
     // Clear out the old notification before scheduling a new one.
-    if ([oldNotifications count] > 0)
-        [app cancelAllLocalNotifications];
+  //  if ([oldNotifications count] > 0)
+   //     [app cancelAllLocalNotifications];
     
     // Create a new notification.
     UILocalNotification* alarm = [[UILocalNotification alloc] init];
@@ -338,6 +340,29 @@
 }
 
 
+
+-(void)startBGNotificationReminderService
+{
+
+UIApplication* app = [UIApplication sharedApplication];
+// Create a new notification.
+UILocalNotification* alarm = [[UILocalNotification alloc] init];
+if (alarm)
+{
+    NSDate *now = [NSDate dateWithTimeIntervalSinceNow:30*60];
+    alarm.fireDate = now;
+    alarm.timeZone = [NSTimeZone defaultTimeZone];
+    alarm.repeatInterval = NSCalendarUnitHour;
+    //alarm.ApplicationIconBadgeNumber = 1;
+    //alarm.soundName = @"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
+    alarm.soundName =@"/Users/nkopp2/Documents/Apps/TestAPKs/PAWS/Altimitude/Altimitude/Alarm.caf";
+    alarm.alertBody = @"PAWS is monitoring the Cabin Pressure Altitude in the background.  Open the app and deselect enable background warnings to end.";
+    
+    [app scheduleLocalNotification:alarm];
+}
+}
+
+
 -(void)startLocationManager
 {
     
@@ -364,9 +389,11 @@
   if ([switchState isOn]) {
     UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Battery Warning" message:@"Background Pressure Monitoring may drain battery when your phone is asleep.  Be sure to turn this off when you no longer need to monitor pressure." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
       [errorAlert show];
+            [self startBGNotificationReminderService];
       
     [self startLocationManager];
 } else {
+        [[UIApplication sharedApplication]cancelAllLocalNotifications];
         [self.locationManager stopUpdatingLocation];
       self.locationManager = nil;
   }
