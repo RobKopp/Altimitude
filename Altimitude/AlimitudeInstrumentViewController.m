@@ -246,7 +246,7 @@
 
 -(void) activateWarning:(NSNumber *)warningValue message:(NSString *)messageValue {
     
-    if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {
+   // if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {
         
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         [formatter setGroupingSeparator: [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator]];
@@ -274,12 +274,12 @@
             [self performFlash];
         }
     }
-}
+//}
 
 
 
 - (void) ringThePressureLocalNotification:(NSNumber *)warningValue message:(NSString *)messageValue {
-    if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {
+  //  if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {
         
         
         
@@ -311,7 +311,7 @@
         [app scheduleLocalNotification:alarm];
     }
     }
-}
+//}
                         
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     // UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error with location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];

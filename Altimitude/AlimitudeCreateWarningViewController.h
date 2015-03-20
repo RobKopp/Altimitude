@@ -15,7 +15,7 @@
 @property(weak,nonatomic)IBOutlet UITextView *messageView;
 @property(weak,nonatomic)IBOutlet UILabel *savedText;
 @property(weak,nonatomic)IBOutlet UIView *textView;
-
+@property(nonatomic)NSInteger selectedIndex;
 @property(weak,nonatomic)IBOutlet UIBarButtonItem *saveButton;
 
 @property(strong, nonatomic)NSDictionary *warning;

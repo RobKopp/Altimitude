@@ -29,6 +29,8 @@
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.allowsSelectionDuringEditing = YES;
     self.tableView.allowsSelection = NO;
+    self.selectedIndex = NSNotFound;
+    
     
     
     
@@ -68,7 +70,11 @@
     AlimitudeWarningCellViewController *cell = (AlimitudeWarningCellViewController *)[tableView cellForRowAtIndexPath:indexPath];
     if(cell != nil) {
         self.selectedWarning = cell.warning;
+        self.selectedIndex = indexPath.row;
+        
+        
         [self performSegueWithIdentifier:@"CreateWarning" sender:self];
+        self.selectedIndex = NSNotFound;
     }
 }
 
@@ -182,8 +188,10 @@
     AlimitudeCreateWarningViewController *newLoc = (AlimitudeCreateWarningViewController *)[segue destinationViewController];
     if(newLoc != nil) {
         newLoc.warning = self.selectedWarning;
+            newLoc.selectedIndex = self.selectedIndex;
+     }
     }
-}
+
 
 
 @end

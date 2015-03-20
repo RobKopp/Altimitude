@@ -26,7 +26,7 @@
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"firstBoot"] == nil) {
 
     
-    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"This application is not certified by the FAA.  This application should be used as only as a back up to supplement your situational awareness and is not a replacement for any airplane instrument or warning system. Cabin Pressure will only be monitored in the background when enabled from the main screen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"This application is not certified by the FAA.  This application should be used only as a back up to supplement your situational awareness and is not a replacement for any airplane instrument or warning system. Cabin Pressure will only be monitored in the background when enabled from the main screen." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
    [errorAlert show];
     
       [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstBoot"];

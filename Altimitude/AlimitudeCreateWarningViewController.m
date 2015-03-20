@@ -38,7 +38,7 @@
     if(self.warning != nil) {
         self.warningField.text = [NSString stringWithFormat:@"%d", [[self.warning objectForKey:@"Altitude"] intValue]];
         self.messageView.text = [self.warning objectForKey:@"Message"];
-        self.warningField.enabled=NO;
+        self.warningField.enabled=YES;
     }
     self.unitLabel.text = [AlimitudeSharedAppState sharedInstance].altitudeUnits == ALTITUDE_FEET_UNITS ? @"ft" : @"m";
     editing = NO;
@@ -56,7 +56,7 @@
         if( warningNumber== nil)
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Altitude Needed!"
-                                                            message:@"You need to enter an altitude in the altitude box to save this warning."
+                                                            message:@"You need to enter an altitude in the altitude box to save this warning. If you would like to delete this warning go back to the Warning List."
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
@@ -76,20 +76,42 @@
                                           @"Dismissed":@"NO",
                                           } mutableCopy];
 
-        for(int i = 0;i < [warnings count]; ++i) {
-            NSMutableDictionary *warning = [warnings objectAtIndex:i];
-            long warningAltitude = [[warning objectForKey:@"Altitude"] longValue];
-            if(warningAltitude == [warningNumber longValue]) {
-                [warning setObject:@"YES" forKey:@"Enabled"];
-                [warning setObject:self.messageView.text forKey:@"Message"];
-                foundWarning = YES;
-                break;
-            }else if(warningAltitude > [warningNumber longValue]) {
-                [warnings insertObject:newWarning atIndex:i];
-                foundWarning = YES;
-                break;
+            if(self.selectedIndex < [warnings count]){
+                [warnings removeObjectAtIndex:self.selectedIndex];
+           
             }
-        }
+
+                  for(int i = 0;i < [warnings count]; ++i) {
+                  NSMutableDictionary *warning = [warnings objectAtIndex:i];
+                   long warningAltitude = [[warning objectForKey:@"Altitude"] longValue];
+                    if(warningAltitude > [warningNumber longValue]) {
+                     [warnings insertObject:newWarning atIndex:i];
+                     foundWarning = YES;
+                     break;
+            
+                  }
+            }
+            
+        
+            
+            
+            
+        //    for(int i = 0;i < [warnings count]; ++i) {
+         //   NSMutableDictionary *warning = [warnings objectAtIndex:i];
+         //   long warningAltitude = [[warning objectForKey:@"Altitude"] longValue];
+         //   if(warningAltitude == [warningNumber longValue]) {
+          //      [warning setObject:@"YES" forKey:@"Enabled"];
+          //      [warning setObject:self.messageView.text forKey:@"Message"];
+           //     foundWarning = YES;
+           //     break;
+           // }else if(warningAltitude > [warningNumber longValue]) {
+           //     [warnings insertObject:newWarning atIndex:i];
+           //     foundWarning = YES;
+            //    break;
+         //   }
+        //}
+                
+                
         //We do this to add it at the end
         if(!foundWarning) {
             [warnings addObject:newWarning];

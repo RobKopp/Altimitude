@@ -11,6 +11,8 @@
 @interface AlimitudeWarningTableViewController : UITableViewController
 
 @property(strong, nonatomic)NSDictionary *selectedWarning;
+@property(nonatomic) NSInteger selectedIndex;
+
 
 -(IBAction)saveButtonPressed:(id)sender;
 
