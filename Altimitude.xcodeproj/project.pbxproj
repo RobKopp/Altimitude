@@ -519,7 +519,7 @@
 		D415CE681A2A5360002A51C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Altimitude.app/Altimitude";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,7 +533,7 @@
 				);
 				INFOPLIST_FILE = "AltimitudeTests/AltimitudeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PAWS.app/PAWS";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -541,7 +541,7 @@
 		D415CE691A2A5360002A51C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Altimitude.app/Altimitude";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -551,7 +551,7 @@
 				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
 				INFOPLIST_FILE = "AltimitudeTests/AltimitudeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PAWS.app/PAWS";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
