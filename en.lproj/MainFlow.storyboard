@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="yRd-rb-lNj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4eJ-tu-TB2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure Altitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5dD-wx-HHS">
-                                <rect key="frame" x="65" y="125" width="190" height="41"/>
+                                <rect key="frame" x="65" y="125" width="284" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="6iV-2S-GSW"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft/min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NL0-9y-mlo">
-                                <rect key="frame" x="177" y="476" width="74" height="41"/>
+                                <rect key="frame" x="271" y="476" width="74" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="74" id="Djk-Aj-ADg"/>
                                     <constraint firstAttribute="height" constant="41" id="E2h-At-o4t"/>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Otm-YD-yAy">
-                                <rect key="frame" x="29" y="185" width="140" height="62"/>
+                                <rect key="frame" x="29" y="185" width="234" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="ULE-sM-t7m"/>
                                 </constraints>
@@ -56,13 +56,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-R3-HRj">
-                                <rect key="frame" x="177" y="207" width="92" height="40"/>
+                                <rect key="frame" x="271" y="207" width="92" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-Cy-KU5">
-                                <rect key="frame" x="53" y="464" width="116" height="59"/>
+                                <rect key="frame" x="53" y="464" width="210" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="drk-Ea-9Ib">
-                                <rect key="frame" x="-48" y="455" width="417" height="105"/>
+                                <rect key="frame" x="-1" y="623" width="417" height="105"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.63" colorSpace="calibratedRGB"/>
@@ -135,7 +135,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DMY-3l-xqN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jnP-6H-PJ2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6g-vZ-rXV">
@@ -155,8 +155,8 @@
                                     </switch>
                                 </subviews>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLG-9S-ypA">
-                                <rect key="frame" x="53" y="230" width="225" height="49"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLG-9S-ypA">
+                                <rect key="frame" x="53" y="230" width="319" height="49"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vibrate on Warning" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soe-on-Xgo">
                                         <rect key="frame" x="20" y="8" width="182" height="21"/>
@@ -258,7 +258,7 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="YIa-8r-z8u">
-                                <rect key="frame" x="-48" y="455" width="417" height="105"/>
+                                <rect key="frame" x="-1" y="623" width="417" height="105"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -305,7 +305,7 @@
             <objects>
                 <tableViewController id="nbt-Lw-5Uk" customClass="AlimitudeWarningTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EiO-sY-SbG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -370,11 +370,11 @@
                         <viewControllerLayoutGuide type="bottom" id="CZf-SO-uim"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M3j-xZ-lHz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-CD-Kp7">
-                                <rect key="frame" x="91" y="110" width="139" height="41"/>
+                                <rect key="frame" x="91" y="110" width="233" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="R4h-CD-Kp7" secondAttribute="height" multiplier="233:69" id="4mQ-nP-hOv"/>
                                 </constraints>
@@ -383,22 +383,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ID0-Ja-jDQ">
-                                <rect key="frame" x="16" y="172" width="288" height="312"/>
+                                <rect key="frame" x="16" y="172" width="382" height="312"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1xr-Qc-BaF">
-                                        <rect key="frame" x="126" y="29" width="36" height="30"/>
+                                        <rect key="frame" x="126" y="29" width="130" height="30"/>
                                         <color key="backgroundColor" red="0.75299337635869568" green="0.75299337635869568" blue="0.75299337635869568" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egu-mF-ofC">
-                                        <rect key="frame" x="170" y="33" width="42" height="22"/>
+                                        <rect key="frame" x="264" y="33" width="42" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" canCancelContentTouches="NO" keyboardDismissMode="interactive" text="Place Your Warning Text Here!" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-TM-d3L">
-                                        <rect key="frame" x="20" y="85" width="248" height="196"/>
+                                        <rect key="frame" x="20" y="85" width="342" height="196"/>
                                         <color key="backgroundColor" red="0.75116762907608692" green="0.75116762907608692" blue="0.75116762907608692" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="196" id="Edx-aE-lRe"/>
@@ -423,7 +423,7 @@
                                 </constraints>
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="ME6-ma-FLc">
-                                <rect key="frame" x="-48" y="455" width="417" height="105"/>
+                                <rect key="frame" x="-1" y="623" width="417" height="105"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -501,6 +501,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina55"/>
     </simulatedMetricsContainer>
 </document>

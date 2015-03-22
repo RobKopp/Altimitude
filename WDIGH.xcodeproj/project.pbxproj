@@ -64,20 +64,20 @@
 		3B3355401A745DC8008BE514 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		3B64EF291A85B6B1005935D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BDE4CF61AB5EC1000DE696B /* alarm2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm2.caf; sourceTree = "<group>"; };
-		D415CE381A2A5360002A51C4 /* PAWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAWS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D415CE381A2A5360002A51C4 /* WDIGH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDIGH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D415CE3B1A2A5360002A51C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D415CE3D1A2A5360002A51C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D415CE3F1A2A5360002A51C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D415CE431A2A5360002A51C4 /* Altimitude-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Altimitude-Info.plist"; sourceTree = "<group>"; };
+		D415CE431A2A5360002A51C4 /* WDIGH-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WDIGH-Info.plist"; sourceTree = "<group>"; };
 		D415CE451A2A5360002A51C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D415CE471A2A5360002A51C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D415CE491A2A5360002A51C4 /* Altimitude-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Altimitude-Prefix.pch"; sourceTree = "<group>"; };
+		D415CE491A2A5360002A51C4 /* WDIGH?-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WDIGH?-Prefix.pch"; sourceTree = "<group>"; };
 		D415CE4A1A2A5360002A51C4 /* AlimitudeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlimitudeAppDelegate.h; sourceTree = "<group>"; };
 		D415CE4B1A2A5360002A51C4 /* AlimitudeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlimitudeAppDelegate.m; sourceTree = "<group>"; };
 		D415CE4D1A2A5360002A51C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D415CE531A2A5360002A51C4 /* AltimitudeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AltimitudeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D415CE531A2A5360002A51C4 /* WDIGHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WDIGHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D415CE541A2A5360002A51C4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D415CE5C1A2A5360002A51C4 /* AltimitudeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AltimitudeTests-Info.plist"; sourceTree = "<group>"; };
+		D415CE5C1A2A5360002A51C4 /* WDIGHTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WDIGHTests-Info.plist"; sourceTree = "<group>"; };
 		D415CE5E1A2A5360002A51C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D415CE601A2A5360002A51C4 /* AltimitudeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AltimitudeTests.m; sourceTree = "<group>"; };
 		D415CE701A2A611D002A51C4 /* AlimitudeWarningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlimitudeWarningsViewController.h; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				3B33553D1A745943008BE514 /* MainFlow.storyboard */,
-				D415CE411A2A5360002A51C4 /* Altimitude */,
+				D415CE411A2A5360002A51C4 /* WDIGH */,
 				D415CE5A1A2A5360002A51C4 /* AltimitudeTests */,
 				D415CE3A1A2A5360002A51C4 /* Frameworks */,
 				D415CE391A2A5360002A51C4 /* Products */,
@@ -140,8 +140,8 @@
 		D415CE391A2A5360002A51C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D415CE381A2A5360002A51C4 /* PAWS.app */,
-				D415CE531A2A5360002A51C4 /* AltimitudeTests.xctest */,
+				D415CE381A2A5360002A51C4 /* WDIGH.app */,
+				D415CE531A2A5360002A51C4 /* WDIGHTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D415CE411A2A5360002A51C4 /* Altimitude */ = {
+		D415CE411A2A5360002A51C4 /* WDIGH */ = {
 			isa = PBXGroup;
 			children = (
 				D46BC3391A4F324100AB68EB /* Images */,
@@ -184,16 +184,16 @@
 				D4A24A631A2BF11600BC4EB3 /* AlimitudeWarningCellViewController.h */,
 				D4A24A661A2BF33500BC4EB3 /* AlimitudeWarningCellViewController.m */,
 			);
-			path = Altimitude;
+			path = WDIGH;
 			sourceTree = "<group>";
 		};
 		D415CE421A2A5360002A51C4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D415CE431A2A5360002A51C4 /* Altimitude-Info.plist */,
+				D415CE431A2A5360002A51C4 /* WDIGH-Info.plist */,
 				D415CE441A2A5360002A51C4 /* InfoPlist.strings */,
 				D415CE471A2A5360002A51C4 /* main.m */,
-				D415CE491A2A5360002A51C4 /* Altimitude-Prefix.pch */,
+				D415CE491A2A5360002A51C4 /* WDIGH?-Prefix.pch */,
 				3B3355401A745DC8008BE514 /* Launch Screen.xib */,
 			);
 			name = "Supporting Files";
@@ -211,7 +211,7 @@
 		D415CE5B1A2A5360002A51C4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D415CE5C1A2A5360002A51C4 /* AltimitudeTests-Info.plist */,
+				D415CE5C1A2A5360002A51C4 /* WDIGHTests-Info.plist */,
 				D415CE5D1A2A5360002A51C4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -235,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D415CE371A2A5360002A51C4 /* Altimitude */ = {
+		D415CE371A2A5360002A51C4 /* WDIGH */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D415CE641A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "Altimitude" */;
+			buildConfigurationList = D415CE641A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "WDIGH" */;
 			buildPhases = (
 				D415CE341A2A5360002A51C4 /* Sources */,
 				D415CE351A2A5360002A51C4 /* Frameworks */,
@@ -247,14 +247,14 @@
 			);
 			dependencies = (
 			);
-			name = Altimitude;
+			name = WDIGH;
 			productName = Altimitude;
-			productReference = D415CE381A2A5360002A51C4 /* PAWS.app */;
+			productReference = D415CE381A2A5360002A51C4 /* WDIGH.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D415CE521A2A5360002A51C4 /* AltimitudeTests */ = {
+		D415CE521A2A5360002A51C4 /* WDIGHTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D415CE671A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "AltimitudeTests" */;
+			buildConfigurationList = D415CE671A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "WDIGHTests" */;
 			buildPhases = (
 				D415CE4F1A2A5360002A51C4 /* Sources */,
 				D415CE501A2A5360002A51C4 /* Frameworks */,
@@ -265,9 +265,9 @@
 			dependencies = (
 				D415CE591A2A5360002A51C4 /* PBXTargetDependency */,
 			);
-			name = AltimitudeTests;
+			name = WDIGHTests;
 			productName = AltimitudeTests;
-			productReference = D415CE531A2A5360002A51C4 /* AltimitudeTests.xctest */;
+			productReference = D415CE531A2A5360002A51C4 /* WDIGHTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -276,7 +276,7 @@
 		D415CE301A2A5360002A51C4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Alimitude;
+				CLASSPREFIX = WDIGH;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Okoppi;
 				TargetAttributes = {
@@ -294,7 +294,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D415CE331A2A5360002A51C4 /* Build configuration list for PBXProject "Altimitude" */;
+			buildConfigurationList = D415CE331A2A5360002A51C4 /* Build configuration list for PBXProject "WDIGH" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -306,8 +306,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D415CE371A2A5360002A51C4 /* Altimitude */,
-				D415CE521A2A5360002A51C4 /* AltimitudeTests */,
+				D415CE371A2A5360002A51C4 /* WDIGH */,
+				D415CE521A2A5360002A51C4 /* WDIGHTests */,
 			);
 		};
 /* End PBXProject section */
@@ -377,7 +377,7 @@
 /* Begin PBXTargetDependency section */
 		D415CE591A2A5360002A51C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D415CE371A2A5360002A51C4 /* Altimitude */;
+			target = D415CE371A2A5360002A51C4 /* WDIGH */;
 			targetProxy = D415CE581A2A5360002A51C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -488,10 +488,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
-				INFOPLIST_FILE = "Altimitude/Altimitude-Info.plist";
+				GCC_PREFIX_HEADER = "Altimitude/WDIGH?-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/WDIGH/WDIGH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PAWS;
+				PRODUCT_NAME = WDIGH;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -506,10 +506,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
-				INFOPLIST_FILE = "Altimitude/Altimitude-Info.plist";
+				GCC_PREFIX_HEADER = "Altimitude/WDIGH?-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/WDIGH/WDIGH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PAWS;
+				PRODUCT_NAME = WDIGH;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -531,8 +531,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "AltimitudeTests/AltimitudeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "AltimitudeTests/WDIGHTests-Info.plist";
+				PRODUCT_NAME = WDIGHTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -549,8 +549,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Altimitude/Altimitude-Prefix.pch";
-				INFOPLIST_FILE = "AltimitudeTests/AltimitudeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "AltimitudeTests/WDIGHTests-Info.plist";
+				PRODUCT_NAME = WDIGHTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -559,7 +559,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D415CE331A2A5360002A51C4 /* Build configuration list for PBXProject "Altimitude" */ = {
+		D415CE331A2A5360002A51C4 /* Build configuration list for PBXProject "WDIGH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D415CE621A2A5360002A51C4 /* Debug */,
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D415CE641A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "Altimitude" */ = {
+		D415CE641A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "WDIGH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D415CE651A2A5360002A51C4 /* Debug */,
@@ -577,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D415CE671A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "AltimitudeTests" */ = {
+		D415CE671A2A5360002A51C4 /* Build configuration list for PBXNativeTarget "WDIGHTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D415CE681A2A5360002A51C4 /* Debug */,

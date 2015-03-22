@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Altimitude.xcodeproj">
+      location = "self:WDIGH.xcodeproj">
    </FileRef>
 </Workspace>
