@@ -13,6 +13,10 @@
 #import <AudioToolbox/AudioServices.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "AlimitudeUnsupportedDevicesViewContollerViewController.h"
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
 
 @interface AlimitudeInstrumentViewControllee <CLLocationManagerDelegate>
 @end
@@ -32,6 +36,54 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    // Gets a string with the device model
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithCString:machine encoding:NSUTF8StringEncoding];
+    free(machine);
+    
+    NSLog(@"%@",platform);
+    
+    
+    // if ([platform isEqualToString:@"iPhone1,1"])    return @"iPhone 2G";
+    //  if ([platform isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
+    // if ([platform isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
+    // if ([platform isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
+    // if ([platform isEqualToString:@"iPhone3,2"])    return @"iPhone 4";
+    // if ([platform isEqualToString:@"iPhone3,3"])    return @"iPhone 4 (CDMA)";
+    // if ([platform isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
+    // if ([platform isEqualToString:@"iPhone5,1"])    return @"iPhone 5";
+    // if ([platform isEqualToString:@"iPhone5,2"])    return @"iPhone 5 (GSM+CDMA)";
+    // if ([platform isEqualToString:@"iPhone6,1"])    return @"iPhone 5s (GSM)";
+    // if ([platform isEqualToString:@"iPhone6,2"])    return @"iPhone 5s (GSM+CDMA)";
+    if ([platform isEqualToString:@"iPhone7,2"])
+    { } else {
+        if ([platform isEqualToString:@"iPhone7,1"])
+        {} else{
+            
+            UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Warning your iPhone is not supported." message:@"This application requires a pressure sensor in your phone. Unfortunately, this application is currently only supported on the iPhone 6 and 6+ due to this hardware availability." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [errorAlert show];
+            
+            AlimitudeUnsupportedDevicesViewContollerViewController  *alarmView = [AlimitudeUnsupportedDevicesViewContollerViewController new];
+            
+            
+            UIViewController *presenter = ((UINavigationController *)self.parentViewController).topViewController;
+            while(presenter.presentedViewController != nil) {
+                presenter = presenter.presentedViewController;
+            }
+            [presenter presentViewController:alarmView animated:YES completion:nil];
+            
+        }
+    }
+    
+    
+    
+    
     
    if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_STARTED);
     {
