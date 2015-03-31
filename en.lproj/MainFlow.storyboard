@@ -192,7 +192,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Click to Set Warnings">
-                                    <color key="titleColor" red="0.45863699766080723" green="1" blue="0.47487300319340253" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.82764378098562497" blue="0.13164061970803487" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
