@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -20,19 +20,6 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     </variation>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" image="OkoppiBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="mCD-Sa-0Ta">
-                    <rect key="frame" x="38" y="313" width="405" height="105"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="105" id="74q-Ik-gha"/>
-                        <constraint firstAttribute="width" constant="405" id="yaE-um-Zic"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="74q-Ik-gha"/>
-                            <exclude reference="yaE-um-Zic"/>
-                        </mask>
-                    </variation>
-                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure Altimeter Warning System" lineBreakMode="middleTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
                     <rect key="frame" x="20" y="48" width="186" height="233"/>
                     <constraints>
@@ -51,18 +38,23 @@
                         </mask>
                     </variation>
                 </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="okoppibarbig2.png" translatesAutoresizingMaskIntoConstraints="NO" id="tEf-xC-zc4">
+                    <rect key="frame" x="0.0" y="276" width="480" height="155"/>
+                    <rect key="contentStretch" x="0.10000000000000001" y="0.10000000000000001" width="0.0" height="0.0"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="mCD-Sa-0Ta" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="32" id="4yg-c4-hEK"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6FI-ND-ajc"/>
-                <constraint firstAttribute="bottom" secondItem="mCD-Sa-0Ta" secondAttribute="bottom" constant="90" id="6sS-If-ejv"/>
+                <constraint firstAttribute="centerX" secondItem="tEf-xC-zc4" secondAttribute="centerX" id="HQX-wn-eD4"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="8ie-xW-0ye" secondAttribute="leading" id="K8K-0a-tQM"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstItem="mCD-Sa-0Ta" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="44" id="Vlu-rE-no9"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="top" secondItem="tEf-xC-zc4" secondAttribute="bottom" constant="8" id="Sp2-hQ-zpe"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="trailing" secondItem="tEf-xC-zc4" secondAttribute="trailing" id="iv2-5a-07f"/>
+                <constraint firstItem="tEf-xC-zc4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nau-Hq-QA3"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="wOr-Bd-WcJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -71,14 +63,12 @@
                 <mask key="constraints">
                     <exclude reference="K8K-0a-tQM"/>
                     <exclude reference="fvb-Df-36g"/>
-                    <exclude reference="4yg-c4-hEK"/>
-                    <exclude reference="Vlu-rE-no9"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="404" y="445"/>
         </view>
     </objects>
     <resources>
-        <image name="OkoppiBar.png" width="416" height="105"/>
+        <image name="okoppibarbig2.png" width="417" height="155"/>
     </resources>
 </document>

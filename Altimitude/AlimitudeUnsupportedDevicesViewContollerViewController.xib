@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlimitudeUnsupportedDevicesViewContollerViewController">
@@ -20,13 +20,35 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="okoppibarbig2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-Uz-twH">
+                    <rect key="frame" x="92" y="367" width="417" height="155"/>
+                    <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="3RY-Uz-twH" firstAttribute="top" secondItem="bcq-iP-0Jo" secondAttribute="bottom" constant="39" id="2hW-cd-QzU"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3RY-Uz-twH" secondAttribute="bottom" constant="78" id="6Su-st-eUd"/>
+                <constraint firstItem="3RY-Uz-twH" firstAttribute="leading" secondItem="bcq-iP-0Jo" secondAttribute="trailing" constant="-460" id="Jpb-vF-EuH"/>
                 <constraint firstAttribute="centerX" secondItem="bcq-iP-0Jo" secondAttribute="centerX" id="UtE-Pr-f1g"/>
                 <constraint firstAttribute="trailing" secondItem="bcq-iP-0Jo" secondAttribute="trailing" constant="20" id="XAC-FG-pcn"/>
+                <constraint firstAttribute="bottom" secondItem="3RY-Uz-twH" secondAttribute="bottom" constant="78" id="YD3-8S-qgA"/>
                 <constraint firstAttribute="centerY" secondItem="bcq-iP-0Jo" secondAttribute="centerY" id="cJr-W6-8Za"/>
+                <constraint firstAttribute="trailing" secondItem="3RY-Uz-twH" secondAttribute="trailing" constant="91" id="doC-md-XWG"/>
+                <constraint firstAttribute="centerX" secondItem="3RY-Uz-twH" secondAttribute="centerX" id="gOc-Av-T7g"/>
+                <constraint firstItem="3RY-Uz-twH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="92" id="zyp-ZB-w5S"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Jpb-vF-EuH"/>
+                    <exclude reference="YD3-8S-qgA"/>
+                    <exclude reference="doC-md-XWG"/>
+                    <exclude reference="zyp-ZB-w5S"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="okoppibarbig2.png" width="417" height="155"/>
+    </resources>
 </document>
