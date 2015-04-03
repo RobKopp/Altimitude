@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface AlimitudeAlarmViewController : UIViewController
+
+@interface AlimitudeAlarmViewController : UIViewController <AVAudioPlayerDelegate>  {
+    AVAudioPlayer *_audioPlayer;
+}
 
 
 

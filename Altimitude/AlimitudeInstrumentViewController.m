@@ -292,10 +292,6 @@
     }
 }
 
--(void)playSound {
-    //Do sound things
-}
-
 -(void) activateWarning:(NSNumber *)warningValue message:(NSString *)messageValue {
     
    // if([AlimitudeSharedAppState sharedInstance].alarmState == ALARM_STATE_SILENCED) {

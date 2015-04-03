@@ -115,7 +115,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Altimeter" id="73I-jC-aok">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="PTV-lG-roK">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="PTV-lG-roK">
                             <connections>
                                 <segue destination="Hwb-gx-xRi" kind="push" id="6Nf-8i-JGD"/>
                             </connections>

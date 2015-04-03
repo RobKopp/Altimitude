@@ -8,6 +8,8 @@
 
 #import "AlimitudeAlarmViewController.h"
 #import "AlimitudeSharedAppState.h"
+#import "AlimitudeInstrumentViewController.h"
+
 
 @interface AlimitudeAlarmViewController () {
     UIColor *fadeToColor;
@@ -27,7 +29,33 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     
+    // Construct URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/alarm2.caf", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Create audio player object and initialize with URL to sound
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    _audioPlayer.delegate= self;
+    
+    
+    if(![_audioPlayer isPlaying]){
+    [_audioPlayer play];
+    }
     [self beginFlash];
+}
+
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)success {
+    if (success) {
+        // last sound finished successfully, play the next sound
+        [_audioPlayer play];
+    } else {
+        // something went wrong, show an error?
+    }
+}
+-(void)stopSound{
+    [_audioPlayer stop];
+    
 }
 
 -(void)setMessageStrings:(NSString*) altitude message:(NSString *)message {
@@ -53,6 +81,10 @@
 -(IBAction)dismissClicked:(id)sender{
     [AlimitudeSharedAppState sharedInstance].alarmState = ALARM_STATE_SILENCED;
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self stopSound];
+    
+
+
 }
 
 @end
